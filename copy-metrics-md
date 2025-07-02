@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-cat docs/metrics-helmet.md <(curl 'https://raw.githubusercontent.com/semgrep/semgrep/develop/metrics.md') > docs/metrics.md

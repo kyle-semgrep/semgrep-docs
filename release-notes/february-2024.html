@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="blog-wrapper blog-post-page plugin-blog plugin-id-default" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">February 2024 | Semgrep</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://semgrep.dev/thumbnail.png"><meta data-rh="true" name="twitter:image" content="https://semgrep.dev/thumbnail.png"><meta data-rh="true" property="og:url" content="https://kyle-semgrep.github.io/semgrep-docs/release-notes/february-2024"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="February 2024 | Semgrep"><meta data-rh="true" name="description" content="Release notes include the changes, fixes, and additions in specific versions of Semgrep."><meta data-rh="true" property="og:description" content="Release notes include the changes, fixes, and additions in specific versions of Semgrep."><meta data-rh="true" property="og:type" content="article"><meta data-rh="true" property="article:published_time" content="2024-02-28T10:00:00.000Z"><meta data-rh="true" property="article:tag" content="Release notes"><link data-rh="true" rel="icon" href="/semgrep-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://kyle-semgrep.github.io/semgrep-docs/release-notes/february-2024"><link data-rh="true" rel="alternate" href="https://kyle-semgrep.github.io/semgrep-docs/release-notes/february-2024" hreflang="en"><link data-rh="true" rel="alternate" href="https://kyle-semgrep.github.io/semgrep-docs/release-notes/february-2024" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://kyle-semgrep.github.io/semgrep-docs/release-notes/february-2024","mainEntityOfPage":"https://kyle-semgrep.github.io/semgrep-docs/release-notes/february-2024","url":"https://kyle-semgrep.github.io/semgrep-docs/release-notes/february-2024","headline":"February 2024","name":"February 2024","description":"Release notes include the changes, fixes, and additions in specific versions of Semgrep.","datePublished":"2024-02-28T10:00:00.000Z","author":[],"keywords":[],"isPartOf":{"@type":"Blog","@id":"https://kyle-semgrep.github.io/semgrep-docs/release-notes","name":"Release notes"}}</script><link rel="alternate" type="application/rss+xml" href="/semgrep-docs/release-notes/rss.xml" title=" RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/semgrep-docs/release-notes/atom.xml" title=" Atom Feed">
+
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XYYV814DDN"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-XYYV814DDN",{})</script>
+
+
+
+
+
+
+<script src="https://kit.fontawesome.com/9a8c23ae22.js" crossorigin="anonymous" async></script>
+<script src="https://semgrep.dev/docs/fs.js" async></script>
+<script src="/docs/js/gtm.js" async></script><link rel="stylesheet" href="/semgrep-docs/assets/css/styles.efff8e51.css">
+<script src="/semgrep-docs/assets/js/runtime~main.a68cd6f8.js" defer="defer"></script>
+<script src="/semgrep-docs/assets/js/main.60ef6fcb.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a href="https://semgrep.dev" target="_self" rel="noopener noreferrer" class="navbar__brand"><div class="navbar__logo"><img src="/semgrep-docs/img/semgrep-icon-text-horizontal.svg" alt="Semgrep logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/semgrep-docs/img/semgrep-icon-text-horizontal-dark.svg" alt="Semgrep logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a href="https://semgrep.dev/api/v1/docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">API</a><a href="https://semgrep.dev/explore" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Registry</a><a href="https://semgrep.dev/editor" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Playground</a><a class="navbar__item navbar__link" href="/semgrep-docs/kb">Knowledge base</a><a href="https://academy.semgrep.dev" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Semgrep Academy</a></div><div class="navbar__items navbar__items--right"><a href="https://semgrep.dev/orgs/-" target="_self" rel="noopener noreferrer" class="navbar__item navbar__link">Login</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div id="markprompt"></div><div class="navbar__search"><button id="search_input_react" type="button" aria-label="Search or ask" class="navbar__search-input search-bar" style="text-align:left">Search or ask</button></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><aside class="col col--3"><nav class="sidebar_re4s thin-scrollbar" aria-label="Blog recent posts navigation"><div class="sidebarItemTitle_pO2u margin-bottom--md">Most recent posts</div><div role="group"><h3 class="yearGroupHeading_rMGB">2025</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/may-2025">May 2025</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/april-2025">April 2025</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/march-2025">March 2025</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/february-2025">February 2025</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/january-2025">January 2025</a></li></ul></div><div role="group"><h3 class="yearGroupHeading_rMGB">2024</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/december-2024">December 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/november-2024">November 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/october-2024">October 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/september-2024">September 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/august-2024">August 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/july-2024">July 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/June-2024">June 2024</a></li></ul></div></nav></aside><main class="col col--7"><article class=""><header><h1 class="title_f1Hy">February 2024</h1><div class="container_mt6G margin-vert--md"><time datetime="2024-02-28T10:00:00.000Z">February 28, 2024</time> · <!-- -->6 min read</div></header><div id="__blog-post-container" class="markdown"><p>The following updates were made to Semgrep in February 2024.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-oss-engine">🔧 OSS Engine<a href="#-oss-engine" class="hash-link" aria-label="Direct link to 🔧 OSS Engine" title="Direct link to 🔧 OSS Engine">​</a></h2>
+<ul>
+<li>The following versions of the OSS Engine were released in February 2024:<!-- -->
+<ul>
+<li><a href="https://github.com/semgrep/semgrep/releases/tag/v1.59.1" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link fa-xs"></i>1.59.1</a></li>
+<li><a href="https://github.com/semgrep/semgrep/releases/tag/v1.60.0" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link fa-xs"></i>1.60.0</a></li>
+<li><a href="https://github.com/semgrep/semgrep/releases/tag/v1.60.1" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link fa-xs"></i>1.60.1</a></li>
+<li><a href="https://github.com/semgrep/semgrep/releases/tag/v1.61.1" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link fa-xs"></i>1.61.1</a></li>
+<li><a href="https://github.com/semgrep/semgrep/releases/tag/v1.62.0" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link fa-xs"></i>1.62.0</a></li>
+<li><a href="https://github.com/semgrep/semgrep/releases/tag/v1.63.0" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link fa-xs"></i>1.63.0</a></li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-cloud-platform">🌐 Cloud Platform<a href="#-cloud-platform" class="hash-link" aria-label="Direct link to 🌐 Cloud Platform" title="Direct link to 🌐 Cloud Platform">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="added">Added<a href="#added" class="hash-link" aria-label="Direct link to Added" title="Direct link to Added">​</a></h3>
+<ul>
+<li><a href="https://semgrep.dev/api/v1/docs/#tag/Finding/operation/semgrep_app.core_exp.findings.handlers.issue.openapi_list_recent_issues" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link fa-xs"></i> API</a>: Added a <code>rule</code> object under <code>findings</code> with the following fields:<!-- -->
+<ul>
+<li><code>name</code></li>
+<li><code>message</code></li>
+<li><code>confidence</code></li>
+<li><code>category</code></li>
+<li><code>subcategories</code></li>
+<li><code>technologies</code></li>
+<li><code>vulnerability_classes</code></li>
+<li><code>cwe_names</code></li>
+<li><code>owasp_names</code> </li>
+</ul>
+</li>
+<li>Added distinction between Pro engine and OSS findings in the Playground and Editor. </li>
+<li>Added support for the <code>linux-arm64</code> platform when you download Semgrep Pro Engine. </li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changed">Changed<a href="#changed" class="hash-link" aria-label="Direct link to Changed" title="Direct link to Changed">​</a></h3>
+<ul>
+<li>Updated the Semgrep Cloud Platform (SCP) login page. </li>
+<li>Updated the login process from the CLI to SCP. This change affects new users. </li>
+<li>Updated the Semgrep installation instructions for Docker. </li>
+<li>Improved performance of Semgrep Playground and Editor. </li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fixed">Fixed<a href="#fixed" class="hash-link" aria-label="Direct link to Fixed" title="Direct link to Fixed">​</a></h3>
+<ul>
+<li>Fixed a bug where the navigation sidebar covered the entire mobile screen and could not be collapsed. </li>
+<li>Scan summary links printed after users run <code>semgrep ci</code> now reflect a
+custom <code>SEMGREP_APP_URL</code> if set.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-code">💻 Code<a href="#-code" class="hash-link" aria-label="Direct link to 💻 Code" title="Direct link to 💻 Code">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="added-1">Added<a href="#added-1" class="hash-link" aria-label="Direct link to Added" title="Direct link to Added">​</a></h3>
+<ul>
+<li>Support for C and C++ is now generally available (GA), including cross-file and cross-function analysis.</li>
+<li>Added new Pro rules for Elixir and the Phoenix framework, covering various security and correctness issues. These are available in the <code>p/elixir</code>
+ruleset.</li>
+<li>Added support for Python, with a focus on the Flask ecosystem, to the Semgrep
+Pro Engine.</li>
+<li>Added support for nested record patterns on the left-hand side of an
+assignment during dataflow analysis. For example, given <code>{ body: { param } } = tainted</code>, Semgrep correctly marks <code>param</code> as tainted.</li>
+<li>The <code>metavariable-regex</code> operator can now match on metavariables of interpolated strings
+that use variables with known values.</li>
+<li><strong>Taint analysis</strong>:<!-- -->
+<ul>
+<li>Added support for Python constructors.</li>
+<li>Added support for index sensitivity. Semgrep tracks taint on individual
+indexes of a data structure when these are constant values, either integers
+or strings, and the code uses the built-in syntax for array indexing.</li>
+<li>Added <code>exact: false</code> as a <code>pattern-sources</code> sub-key so you can specify that anything inside a code region is a sink:<!-- -->
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">pattern-sources</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">      </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">exact</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">false</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token key atrule" style="color:#00a4db">pattern</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">...</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+<li>When <code>exact: true</code> and <code>taint_assume_safe_functions: true</code>, Semgrep now
+considers that, if the specified formula isn&#x27;t a <code>patterns</code> with a
+<code>focus-metavariable</code>, it must look for taint in the function call&#x27;s arguments. For example:<!-- -->
+<div class="language-yaml codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-yaml codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">...</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">options</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token key atrule" style="color:#00a4db">taint_assume_safe_functions</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">true</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token key atrule" style="color:#00a4db">pattern-sources</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token punctuation" style="color:#393A34">-</span><span class="token plain"> </span><span class="token key atrule" style="color:#00a4db">exact</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token boolean important" style="color:#36acaa">false</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token key atrule" style="color:#00a4db">pattern</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">...</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changed-1">Changed<a href="#changed-1" class="hash-link" aria-label="Direct link to Changed" title="Direct link to Changed">​</a></h3>
+<ul>
+<li>Improved error handling during interfile analysis so Semgrep Code doesn&#x27;t crash.</li>
+<li><strong>CLI</strong>: If there are multiple errors resulting from the user running Pro
+rules without a license, the CLI groups all errors and reports a
+single warning.</li>
+<li>The project name for repositories scanned locally is <code>local_scan/&lt;repo_name&gt;</code>
+instead of <code>&lt;repo_name&gt;</code>.</li>
+<li>The <strong>View Results</strong> URL displayed for findings now includes the repository
+and branch names.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fixed-1">Fixed<a href="#fixed-1" class="hash-link" aria-label="Direct link to Fixed" title="Direct link to Fixed">​</a></h3>
+<ul>
+<li>Fixed an issue with incorrect autofix application where multiple fixes were
+applied to the same line.</li>
+<li>Fixed issue where tokens for type parameter brackets weren&#x27;t stored correctly.
+They&#x27;re now stored in the generic AST, allowing Semgrep to autofix
+these constructs correctly.</li>
+<li>Fixed an issue where Semgrep doesn&#x27;t support multiple labels for taint
+traces. Now, Semgrep looks at the <code>requires</code> of the sink, and if it has the
+shape <code>A and ...</code>, it picks <code>A</code> as the preferred label and reports the
+trace.</li>
+<li>Fixed issue where taint signatures don&#x27;t capture changes to parameter fields.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="️-supply-chain">⛓️ Supply Chain<a href="#️-supply-chain" class="hash-link" aria-label="Direct link to ⛓️ Supply Chain" title="Direct link to ⛓️ Supply Chain">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="added-2">Added<a href="#added-2" class="hash-link" aria-label="Direct link to Added" title="Direct link to Added">​</a></h3>
+<ul>
+<li>Added support for parsing Swift Package Manager manifest files and lock files.</li>
+<li>Added the ability to filter for dependencies that Semgrep has commented on.</li>
+<li>Added manual review advice to GitHub PR comments. Certain Semgrep Supply Chain (SSC) findings require <strong>manual review</strong> to verify if the finding is reachable or not. </li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fixed-2">Fixed<a href="#fixed-2" class="hash-link" aria-label="Direct link to Fixed" title="Direct link to Fixed">​</a></h3>
+<ul>
+<li>Fixed issues with trailing newline parsing in <code>pyproject.toml</code> and
+<code>poetry.lock</code> files.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-secrets">🔐 Secrets<a href="#-secrets" class="hash-link" aria-label="Direct link to 🔐 Secrets" title="Direct link to  🔐 Secrets">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="added-3">Added<a href="#added-3" class="hash-link" aria-label="Direct link to Added" title="Direct link to Added">​</a></h3>
+<ul>
+<li>Added the following new rules:<!-- -->
+<ul>
+<li>Detection rules for Azure and AWS</li>
+<li>Semantic secrets rules for Python, JavaScript, and TypeScript</li>
+<li>Semantic rules for hard-coded credentials in bash for <code>curl</code> commands</li>
+</ul>
+</li>
+<li>Added non-validator regex detection for databases, including MongoDB,
+Microsoft SQL Server, MySQL, Postgres, and Redis</li>
+<li>Added secrets rule management, which is accessible in Semgrep Cloud Platform
+by going to <strong>Rules</strong> &gt; <strong>Policies</strong> &gt; <strong>Secrets</strong>. This allows you to:<!-- -->
+<ul>
+<li>See all available rules</li>
+<li>Set valid finding modes for the rules</li>
+<li>Set invalid and error validation state modes across multiple rules</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fixed-3">Fixed<a href="#fixed-3" class="hash-link" aria-label="Direct link to Fixed" title="Direct link to Fixed">​</a></h3>
+<ul>
+<li>Fixed an issue where the <strong>Analysis method</strong> filter in Semgrep Cloud Platform
+wasn&#x27;t filtering correctly.</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="-documentation-and-knowledge-base">📝 Documentation and knowledge base<a href="#-documentation-and-knowledge-base" class="hash-link" aria-label="Direct link to 📝 Documentation and knowledge base" title="Direct link to 📝 Documentation and knowledge base">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="added-4">Added<a href="#added-4" class="hash-link" aria-label="Direct link to Added" title="Direct link to Added">​</a></h3>
+<ul>
+<li>The Semgrep docs sidebar has been reorganized to help users browse through the docs.</li>
+<li>Added a <a href="/semgrep-docs/deployment/core-deployment">series of guides</a> to setting up Semgrep as part of a security program for your organization.</li>
+<li>Added a guide to setting up a <a href="/semgrep-docs/semgrep-ci/network-broker">network broker</a> that facilitates secure access between Semgrep and your private network.</li>
+<li>Added <a href="/semgrep-docs/writing-rules/experiments/pattern-syntax">Experimental rules</a> syntax reference.</li>
+<li>Added the following knowledge base articles:<!-- -->
+<ul>
+<li><a href="/semgrep-docs/kb/semgrep-ci/collect-gitlab-logs">GitLab &quot;Job&#x27;s log exceeded limit&quot; error</a></li>
+<li><a href="/semgrep-docs/kb/semgrep-ci/bitbuket-jenkins-pipeline-projects">Set up Jenkins pipeline projects for Bitbucket repositories</a></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="changed-2">Changed<a href="#changed-2" class="hash-link" aria-label="Direct link to Changed" title="Direct link to Changed">​</a></h3>
+<ul>
+<li>Updated the links within the <a href="/semgrep-docs/semgrep-ci/sample-ci-configs#sample-gitlab-cicd-configuration-snippet">GitLab CI/CD configuration file</a>.</li>
+<li>Removed phone support from the docs.</li>
+<li>Updated the <a href="/semgrep-docs/semgrep-appsec-platform/slack-notifications">Semgrep-Slack integration docs</a> to clarify requirements for posting to private channels.</li>
+<li>Updated the <a href="/semgrep-docs/writing-rules/private-rules">sample GHA configuration file</a>for a CI job that publishes private Semgrep rules.</li>
+<li>Clarified the Semgrep Assistant <a href="/semgrep-docs/semgrep-assistant/overview">privacy policy</a> on what data is stored.</li>
+<li>Updated <a href="/semgrep-docs/docs/semgrep-pro-vs-oss">Semgrep Pro versus OSS</a> docs. </li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fixed-4">Fixed<a href="#fixed-4" class="hash-link" aria-label="Direct link to Fixed" title="Direct link to Fixed">​</a></h3>
+<ul>
+<li>Fixed formatting on GitHub PR comments documentation. Thank you to <a href="https://github.com/parsiya" target="_blank" rel="noopener noreferrer">parsiya</a> for the fix.</li>
+<li>Various link fixes and Docker image updates.</li>
+</ul></div><footer class="docusaurus-mt-lg"><div class="row margin-top--sm theme-blog-footer-edit-meta-row"><div class="col"><b>Tags:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a class="tag_zVej tagRegular_sFm0" href="/semgrep-docs/release-notes/tags/release-notes">Release notes</a></li></ul></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Blog post page navigation"><a class="pagination-nav__link pagination-nav__link--prev" href="/semgrep-docs/release-notes/march-2024"><div class="pagination-nav__sublabel">Newer post</div><div class="pagination-nav__label">March 2024</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/semgrep-docs/release-notes/january-2024"><div class="pagination-nav__sublabel">Older post</div><div class="pagination-nav__label">January 2024</div></a></nav></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#-oss-engine" class="table-of-contents__link toc-highlight">🔧 OSS Engine</a></li><li><a href="#-cloud-platform" class="table-of-contents__link toc-highlight">🌐 Cloud Platform</a><ul><li><a href="#added" class="table-of-contents__link toc-highlight">Added</a></li><li><a href="#changed" class="table-of-contents__link toc-highlight">Changed</a></li><li><a href="#fixed" class="table-of-contents__link toc-highlight">Fixed</a></li></ul></li><li><a href="#-code" class="table-of-contents__link toc-highlight">💻 Code</a><ul><li><a href="#added-1" class="table-of-contents__link toc-highlight">Added</a></li><li><a href="#changed-1" class="table-of-contents__link toc-highlight">Changed</a></li><li><a href="#fixed-1" class="table-of-contents__link toc-highlight">Fixed</a></li></ul></li><li><a href="#️-supply-chain" class="table-of-contents__link toc-highlight">⛓️ Supply Chain</a><ul><li><a href="#added-2" class="table-of-contents__link toc-highlight">Added</a></li><li><a href="#fixed-2" class="table-of-contents__link toc-highlight">Fixed</a></li></ul></li><li><a href="#-secrets" class="table-of-contents__link toc-highlight">🔐 Secrets</a><ul><li><a href="#added-3" class="table-of-contents__link toc-highlight">Added</a></li><li><a href="#fixed-3" class="table-of-contents__link toc-highlight">Fixed</a></li></ul></li><li><a href="#-documentation-and-knowledge-base" class="table-of-contents__link toc-highlight">📝 Documentation and knowledge base</a><ul><li><a href="#added-4" class="table-of-contents__link toc-highlight">Added</a></li><li><a href="#changed-2" class="table-of-contents__link toc-highlight">Changed</a></li><li><a href="#fixed-4" class="table-of-contents__link toc-highlight">Fixed</a></li></ul></li></ul></div></div></div></div></div><footer class="footer"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://go.semgrep.dev/slack" target="_blank" rel="noopener noreferrer" class="footer__link-item">Slack<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/semgrep/semgrep" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/semgrep/semgrep/issues" target="_blank" rel="noopener noreferrer" class="footer__link-item">File an issue<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Products</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://semgrep.dev/products/semgrep-code/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Semgrep Code</a></li><li class="footer__item"><a href="https://semgrep.dev/products/semgrep-supply-chain/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Semgrep Supply Chain</a></li><li class="footer__item"><a href="https://semgrep.dev/products/semgrep-appsec-platform/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Semgrep AppSec Platform</a></li></ul></div><div class="col footer__col"><div class="footer__title">Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" target="_self" href="/semgrep-docs/docs">Docs</a></li><li class="footer__item"><a href="https://semgrep.dev/blog" target="_blank" rel="noopener noreferrer" class="footer__link-item">Blog</a></li><li class="footer__item"><a href="https://semgrep.dev/contact/demo" target="_blank" rel="noopener noreferrer" class="footer__link-item">Book a demo</a></li><li class="footer__item"><a href="https://semgrep.dev/pricing/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Pricing</a></li><li class="footer__item"><a href="https://semgrep.dev/privacy" target="_self" rel="noopener noreferrer" class="footer__link-item">Privacy</a></li><li class="footer__item"><a href="https://semgrep.dev/terms" target="_blank" rel="noopener noreferrer" class="footer__link-item">Terms of service</a></li></ul></div><div class="col footer__col"><div class="footer__title">Company</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://semgrep.dev/about" target="_blank" rel="noopener noreferrer" class="footer__link-item">About<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://semgrep.dev/about/careers" target="_blank" rel="noopener noreferrer" class="footer__link-item">Careers<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://semgrep.dev/contact-us" target="_blank" rel="noopener noreferrer" class="footer__link-item">Contact us<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Semgrep, Inc. Semgrep®️  is a registered trademark of Semgrep, Inc. These docs are made with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>

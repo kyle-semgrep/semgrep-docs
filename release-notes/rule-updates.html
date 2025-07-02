@@ -1,0 +1,1807 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="blog-wrapper blog-post-page plugin-blog plugin-id-default" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.7.0">
+<title data-rh="true">Rule updates | Semgrep</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://semgrep.dev/thumbnail.png"><meta data-rh="true" name="twitter:image" content="https://semgrep.dev/thumbnail.png"><meta data-rh="true" property="og:url" content="https://kyle-semgrep.github.io/semgrep-docs/release-notes/rule-updates"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docusaurus_tag" content="default"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docsearch:docusaurus_tag" content="default"><meta data-rh="true" property="og:title" content="Rule updates | Semgrep"><meta data-rh="true" name="description" content="Rule updates document significant rule updates made monthly."><meta data-rh="true" property="og:description" content="Rule updates document significant rule updates made monthly."><meta data-rh="true" property="og:type" content="article"><meta data-rh="true" property="article:published_time" content="2023-02-28T10:00:00.000Z"><link data-rh="true" rel="icon" href="/semgrep-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://kyle-semgrep.github.io/semgrep-docs/release-notes/rule-updates"><link data-rh="true" rel="alternate" href="https://kyle-semgrep.github.io/semgrep-docs/release-notes/rule-updates" hreflang="en"><link data-rh="true" rel="alternate" href="https://kyle-semgrep.github.io/semgrep-docs/release-notes/rule-updates" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://kyle-semgrep.github.io/semgrep-docs/release-notes/rule-updates","mainEntityOfPage":"https://kyle-semgrep.github.io/semgrep-docs/release-notes/rule-updates","url":"https://kyle-semgrep.github.io/semgrep-docs/release-notes/rule-updates","headline":"Rule updates","name":"Rule updates","description":"Rule updates document significant rule updates made monthly.","datePublished":"2023-02-28T10:00:00.000Z","author":[],"keywords":[],"isPartOf":{"@type":"Blog","@id":"https://kyle-semgrep.github.io/semgrep-docs/release-notes","name":"Release notes"}}</script><link rel="alternate" type="application/rss+xml" href="/semgrep-docs/release-notes/rss.xml" title=" RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/semgrep-docs/release-notes/atom.xml" title=" Atom Feed">
+
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XYYV814DDN"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-XYYV814DDN",{})</script>
+
+
+
+
+
+
+<script src="https://kit.fontawesome.com/9a8c23ae22.js" crossorigin="anonymous" async></script>
+<script src="https://semgrep.dev/docs/fs.js" async></script>
+<script src="/docs/js/gtm.js" async></script><link rel="stylesheet" href="/semgrep-docs/assets/css/styles.efff8e51.css">
+<script src="/semgrep-docs/assets/js/runtime~main.a68cd6f8.js" defer="defer"></script>
+<script src="/semgrep-docs/assets/js/main.60ef6fcb.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a href="https://semgrep.dev" target="_self" rel="noopener noreferrer" class="navbar__brand"><div class="navbar__logo"><img src="/semgrep-docs/img/semgrep-icon-text-horizontal.svg" alt="Semgrep logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/semgrep-docs/img/semgrep-icon-text-horizontal-dark.svg" alt="Semgrep logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div></a><a href="https://semgrep.dev/api/v1/docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">API</a><a href="https://semgrep.dev/explore" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Registry</a><a href="https://semgrep.dev/editor" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Playground</a><a class="navbar__item navbar__link" href="/semgrep-docs/kb">Knowledge base</a><a href="https://academy.semgrep.dev" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Semgrep Academy</a></div><div class="navbar__items navbar__items--right"><a href="https://semgrep.dev/orgs/-" target="_self" rel="noopener noreferrer" class="navbar__item navbar__link">Login</a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite" aria-pressed="false"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div id="markprompt"></div><div class="navbar__search"><button id="search_input_react" type="button" aria-label="Search or ask" class="navbar__search-input search-bar" style="text-align:left">Search or ask</button></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="container margin-vert--lg"><div class="row"><aside class="col col--3"><nav class="sidebar_re4s thin-scrollbar" aria-label="Blog recent posts navigation"><div class="sidebarItemTitle_pO2u margin-bottom--md">Most recent posts</div><div role="group"><h3 class="yearGroupHeading_rMGB">2025</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/may-2025">May 2025</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/april-2025">April 2025</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/march-2025">March 2025</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/february-2025">February 2025</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/january-2025">January 2025</a></li></ul></div><div role="group"><h3 class="yearGroupHeading_rMGB">2024</h3><ul class="sidebarItemList_Yudw clean-list"><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/december-2024">December 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/november-2024">November 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/october-2024">October 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/september-2024">September 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/august-2024">August 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/july-2024">July 2024</a></li><li class="sidebarItem__DBe"><a class="sidebarItemLink_mo7H" href="/semgrep-docs/release-notes/June-2024">June 2024</a></li></ul></div></nav></aside><main class="col col--7"><article class=""><header><h1 class="title_f1Hy">Rule updates</h1><div class="container_mt6G margin-vert--md"><time datetime="2023-02-28T10:00:00.000Z">February 28, 2023</time> · <!-- -->20 min read</div></header><div id="__blog-post-container" class="markdown"><p>This document includes selected new rules, removed or reduced number of false positives (FP) and false negatives (FN). These new rules and their updates are made by the Semgrep community and Semgrep, Inc.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Maintenance status</div><div class="admonitionContent_BuS1"><p>This document is no longer updated. For updates, refer to the following sources:</p><ul>
+<li><a href="https://semgrep.dev/orgs/-/supply-chain/advisories" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link fa-xs"></i> Supply Chain &gt; Advisories</a></li>
+<li><a href="https://semgrep.dev/products/product-updates/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link fa-xs"></i> Product updates feed</a></li>
+</ul></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="february-2023">February 2023<a href="#february-2023" class="hash-link" aria-label="Direct link to February 2023" title="Direct link to February 2023">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="community-rules">Community rules<a href="#community-rules" class="hash-link" aria-label="Direct link to Community rules" title="Direct link to Community rules">​</a></h3>
+<p>Thanks to <a href="https://github.com/Sjord" target="_blank" rel="noopener noreferrer">Sjord</a>, <a href="https://github.com/artem-fedorov" target="_blank" rel="noopener noreferrer">@artem-fedorov</a> and <a href="https://github.com/gabriellesc" target="_blank" rel="noopener noreferrer">@gabriellesc</a> for their contributions!</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-rules-from-semgrep-community-and-semgrep-inc">New rules from Semgrep community and Semgrep, Inc<a href="#new-rules-from-semgrep-community-and-semgrep-inc" class="hash-link" aria-label="Direct link to New rules from Semgrep community and Semgrep, Inc" title="Direct link to New rules from Semgrep community and Semgrep, Inc">​</a></h4>
+<ul>
+<li>Improved coverage for security issues in Terraform: <a href="https://semgrep.dev/r?q=terraform.aws.security" target="_blank">terraform.aws.security</a></li>
+<li>Additional rules for weak ciphers in Java: <a href="https://semgrep.dev/r?q=java.lang.security.audit.crypto" target="_blank">java.lang.security.audit.crypto</a></li>
+<li>Additional rules for inline JavaScript and related security issues:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=html.security.audit.eval-detected.eval-detected" target="_blank">html.security.audit.eval-detected.eval-detected</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=html.security.audit.inscure-document-method.insecure-document-method" target="_blank">html.security.audit.inscure-document-method.insecure-document-method</a>
+</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="updated-community-rules">Updated Community rules<a href="#updated-community-rules" class="hash-link" aria-label="Direct link to Updated Community rules" title="Direct link to Updated Community rules">​</a></h4>
+<ul>
+<li>Added and improved autofix for many rules</li>
+<li>Improved patterns:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.audit.command-injection-formatted-runtime-call.command-injection-formatted-runtime-call" target="_blank">java.lang.security.audit.command-injection-formatted-runtime-call.command-injection-formatted-runtime-call</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.express-insecure-template-usage.express-insecure-template-usage" target="_blank">javascript.express.security.express-insecure-template-usage.express-insecure-template-usage</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.audit.crypto.des-is-deprecated" target="_blank">java.lang.security.audit.crypto.des-is-deprecated</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.audit.crypto.no-null-cipher" target="_blank">java.lang.security.audit.crypto.no-null-cipher</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.audit.crypto.rsa-no-padding" target="_blank">java.lang.security.audit.crypto.rsa-no-padding</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=problem-based-packs.insecure-transport.js-node.disallow-old-tls-versions2.disallow-old-tls-versions2" target="_blank">problem-based-packs.insecure-transport.js-node.disallow-old-tls-versions2.disallow-old-tls-versions2</a>
+</li>
+</ul>
+</li>
+<li>Improved accuracy:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.injection.tainted-html-string.tainted-html-string" target="_blank">java.spring.security.injection.tainted-html-string.tainted-html-string</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.secrets.gitleaks.generic-api-key.generic-api-key" target="_blank">generic.secrets.gitleaks.generic-api-key.generic-api-key</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.nodejsscan.crypto_node.node_md5" target="_blank">contrib.nodejsscan.crypto_node.node_md5</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.nodejsscan.crypto_node.node_sha1" target="_blank">contrib.nodejsscan.crypto_node.node_sha1</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=dockerfile.security.last-user-is-root.last-user-is-root" target="_blank">dockerfile.security.last-user-is-root.last-user-is-root</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.dockerfile.security.last-user-is-root.last-user-is-root" target="_blank">generic.dockerfile.security.last-user-is-root.last-user-is-root</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.secrets.security.detected-npm-token.detected-npm-token" target="_blank">generic.secrets.security.detected-npm-token.detected-npm-token</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=php.lang.security.injection.echoed-request.echoed-request" target="_blank">php.lang.security.injection.echoed-request.echoed-request</a>
+</li>
+</ul>
+</li>
+<li>Improved rule message:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=java.security.spring.audit.spring-csrf-disabled.spring-csrf-disabled" target="_blank">java.security.spring.audit.spring-csrf-disabled.spring-csrf-disabled</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.nodejsscan.crypto_node.node_md5" target="_blank">contrib.nodejsscan.crypto_node.node_md5</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.nodejsscan.crypto_node.node_sha1" target="_blank">contrib.nodejsscan.crypto_node.node_sha1</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find" target="_blank">ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=terraform.aws.security.aws-cloudwatch-log-group-unencrypted.aws-cloudwatch-log-group-unencrypted" target="_blank">terraform.aws.security.aws-cloudwatch-log-group-unencrypted.aws-cloudwatch-log-group-unencrypted</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=terraform.aws.security.aws-dynamodb-table-unencrypted.aws-dynamodb-table-unencrypted" target="_blank">terraform.aws.security.aws-dynamodb-table-unencrypted.aws-dynamodb-table-unencrypted</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=terraform.aws.security.aws-lambda-environment-unencrypted.aws-lambda-environment-unencrypted" target="_blank">terraform.aws.security.aws-lambda-environment-unencrypted.aws-lambda-environment-unencrypted</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=terraform.aws.security.aws-secretsmanager-secret-unencrypted.aws-secretsmanager-secret-unencrypted" target="_blank">terraform.aws.security.aws-secretsmanager-secret-unencrypted.aws-secretsmanager-secret-unencrypted</a>
+</li>
+</ul>
+</li>
+<li>Improved metadata:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=ruby.lang.security.no-eval.ruby-eval" target="_blank">ruby.lang.security.no-eval.ruby-eval</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.nodejsscan.crypto_node.node_md5" target="_blank">contrib.nodejsscan.crypto_node.node_md5</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.nodejsscan.crypto_node.node_sha1" target="_blank">contrib.nodejsscan.crypto_node.node_sha1</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find" target="_blank">ruby.rails.security.brakeman.check-unscoped-find.check-unscoped-find</a>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pro-rules">Pro rules<a href="#pro-rules" class="hash-link" aria-label="Direct link to Pro rules" title="Direct link to Pro rules">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-pro-rules">New Pro rules<a href="#new-pro-rules" class="hash-link" aria-label="Direct link to New Pro rules" title="Direct link to New Pro rules">​</a></h4>
+<ul>
+<li>Improved coverage for:<!-- -->
+<ul>
+<li>Deserialization issues in Java</li>
+<li>Deserialization issues in Python</li>
+<li>Weak hash algorithms in JavaScript</li>
+<li>NoSQL injection in Java</li>
+<li>NoSQL injection in JavaScript</li>
+<li>ReDOS in JavaScript</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="january-2023">January 2023<a href="#january-2023" class="hash-link" aria-label="Direct link to January 2023" title="Direct link to January 2023">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="community-rules-1">Community rules<a href="#community-rules-1" class="hash-link" aria-label="Direct link to Community rules" title="Direct link to Community rules">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-rules-from-semgrep-community-and-semgrep-inc-1">New rules from Semgrep community and Semgrep, Inc<a href="#new-rules-from-semgrep-community-and-semgrep-inc-1" class="hash-link" aria-label="Direct link to New rules from Semgrep community and Semgrep, Inc" title="Direct link to New rules from Semgrep community and Semgrep, Inc">​</a></h4>
+<ul>
+<li>Thanks <a href="https://github.com/johnssimon007" target="_blank" rel="noopener noreferrer">johnssimon007</a>! New rule for empty encryption key in Python: <a href="https://semgrep.dev/r?q=python.cryptography.security.empty-aes-key.empty-aes-key" target="_blank">python.cryptography.security.empty-aes-key.empty-aes-key</a></li>
+<li>Thanks <a href="https://github.com/johnssimon007" target="_blank" rel="noopener noreferrer">johnssimon007</a>! New rule for header injection in Python/Flask: <a href="https://semgrep.dev/r?q=python.flask.security.audit.host-header-injection-python" target="_blank">python.flask.security.audit.host-header-injection-python</a></li>
+<li>Additional rule for deserialization vulnerabilities in Ruby: <a href="https://semgrep.dev/r?q=ruby.lang.security.bad-deserialization-env.bad-deserialization-env" target="_blank">ruby.lang.security.bad-deserialization-env.bad-deserialization-env</a></li>
+<li>Ported regex-based rules from Gitleaks</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="updated-community-rules-1">Updated Community rules<a href="#updated-community-rules-1" class="hash-link" aria-label="Direct link to Updated Community rules" title="Direct link to Updated Community rules">​</a></h4>
+<ul>
+<li>Thanks <a href="https://github.com/ben-elttam" target="_blank" rel="noopener noreferrer">@ben-elttam</a>! FP reduction in Kubernetes rules:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=yaml.kubernetes.security.run-as-non-root.run-as-non-root" target="_blank">yaml.kubernetes.security.run-as-non-root.run-as-non-root</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=yaml.kubernetes.security.run-as-non-root-unsafe-value.run-as-non-root-unsafe-value" target="_blank">yaml.kubernetes.security.run-as-non-root-unsafe-value.run-as-non-root-unsafe-value</a>
+</li>
+</ul>
+</li>
+<li>Thanks <a href="https://github.com/artem-fedorov" target="_blank" rel="noopener noreferrer">@artem-fedorov</a>! OWASP metadata fixed for too <strong>many</strong> rules to list here!</li>
+<li>Thanks <a href="https://github.com/ianmuscat" target="_blank" rel="noopener noreferrer">ianmuscat</a>! FP reduction with additional patterns: <a href="https://semgrep.dev/r?q=generic.ci.security.use-frozen-lockfile.use-frozen-lockfile" target="_blank">generic.ci.security.use-frozen-lockfile.use-frozen-lockfile</a></li>
+<li>Thanks <a href="https://github.com/paisleyrob" target="_blank" rel="noopener noreferrer">paisleyrob</a>! FP reduction with improved patterns:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=c.lang.security.use-after-free.use-after-free" target="_blank">c.lang.security.use-after-free.use-after-free</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=c.lang.security.insecure-use-printf-fn.insecure-use-printf-fn" target="_blank">c.lang.security.insecure-use-printf-fn.insecure-use-printf-fn</a>
+</li>
+</ul>
+</li>
+<li>Thanks <a href="https://github.com/rc-JoshuaZepf" target="_blank" rel="noopener noreferrer">rc-JoshuaZepf</a>! FP reduction with improved patterns: <a href="https://semgrep.dev/r?q=terraform.lang.security.ec2-imdsv1-optional.ec2-imdsv1-optional" target="_blank">terraform.lang.security.ec2-imdsv1-optional.ec2-imdsv1-optional</a></li>
+<li>Thanks <a href="https://github.com/nightshiba" target="_blank" rel="noopener noreferrer">nightshiba</a>! FP reduction with improved patterns: <a href="https://semgrep.dev/r?q=javascript.express.security.audit.xss.mustache.explicit-unescape.template-explicit-unescape" target="_blank">javascript.express.security.audit.xss.mustache.explicit-unescape.template-explicit-unescape</a></li>
+<li>Thanks <a href="https://github.com/Sjord" target="_blank" rel="noopener noreferrer">Sjord</a>! FP reduction with improved patterns: <a href="https://semgrep.dev/r?q=php.lang.security.audit.assert-use-audit.assert-use-audit" target="_blank">php.lang.security.audit.assert-use-audit.assert-use-audit</a></li>
+<li>FP reduction with improved pattern for taint mode:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-ssrf.express-ssrf" target="_blank">javascript.express.security.audit.express-ssrf.express-ssrf</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.injection.tainted-file-path.tainted-file-path" target="_blank">java.spring.security.injection.tainted-file-path.tainted-file-path</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.injection.tainted-system-command.tainted-system-command" target="_blank">java.spring.security.injection.tainted-system-command.tainted-system-command</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ruby.lang.security.bad-deserialization-yaml.bad-deserialization-yaml" target="_blank">ruby.lang.security.bad-deserialization-yaml.bad-deserialization-yaml</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.xss.direct-response-write.direct-response-write" target="_blank">javascript.express.security.audit.xss.direct-response-write.direct-response-write</a>
+</li>
+</ul>
+</li>
+<li>FN reduction with improved patterns for taint mode:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.injection.tainted-file-path.tainted-file-path" target="_blank">java.spring.security.injection.tainted-file-path.tainted-file-path</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.injection.tainted-html-string.tainted-html-string" target="_blank">java.spring.security.injection.tainted-html-string.tainted-html-string</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.injection.tainted-sql-string.tainted-sql-string" target="_blank">java.spring.security.injection.tainted-sql-string.tainted-sql-string</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.injection.tainted-system-command.tainted-system-command" target="_blank">java.spring.security.injection.tainted-system-command.tainted-system-command</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.injection.tainted-url-host.tainted-url-host" target="_blank">java.spring.security.injection.tainted-url-host.tainted-url-host</a>
+</li>
+</ul>
+</li>
+<li>Deprecated rules:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.cve.cve-2022-22965.cve-2022-22965" target="_blank">java.spring.security.cve.cve-2022-22965.cve-2022-22965</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=php.lang.security.preg-replace-eval.preg-replace-eval" target="_blank">php.lang.security.preg-replace-eval.preg-replace-eval</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=html.security.missing-noopener.missing-noopener" target="_blank">html.security.missing-noopener.missing-noopener</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=html.security.missing-noreferrer.missing-noreferrer" target="_blank">html.security.missing-noreferrer.missing-noreferrer</a>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="pro-rules-1">Pro rules<a href="#pro-rules-1" class="hash-link" aria-label="Direct link to Pro rules" title="Direct link to Pro rules">​</a></h3>
+<p>The <strong>Pro rules</strong> are created by Semgrep, Inc and targeted for security and software engineers who need accurate findings. These rules were previously marked as Team tier rules (see the updates below). As of this update, these rules are called the <strong><a href="/semgrep-docs/semgrep-code/pro-rules">Pro rules</a></strong> and are available with the <a href="https://semgrep.dev/pricing" target="_blank" rel="noopener noreferrer">Team or higher tier</a>.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-pro-rules-1">New Pro rules<a href="#new-pro-rules-1" class="hash-link" aria-label="Direct link to New Pro rules" title="Direct link to New Pro rules">​</a></h4>
+<ul>
+<li>New rules for hardcoded secrets:<!-- -->
+<ul>
+<li>Database libraries for Java</li>
+<li>Database libraries for Ruby</li>
+</ul>
+</li>
+<li>New rules for JavaScript:<!-- -->
+<ul>
+<li>Weak symmetric cryptography</li>
+<li>RegExp ReDos</li>
+<li>XSS</li>
+<li>Open Redirect</li>
+</ul>
+</li>
+<li>New rules for Java:<!-- -->
+<ul>
+<li>SSRF in Java Servlets and Spring Framework</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="updated-pro-rules">Updated Pro rules<a href="#updated-pro-rules" class="hash-link" aria-label="Direct link to Updated Pro rules" title="Direct link to Updated Pro rules">​</a></h4>
+<ul>
+<li>FP reduction with improved pattern for taint mode:<!-- -->
+<ul>
+<li>Command Injection in Java Servlets and Spring Framework</li>
+<li>XSS in Java Spring Framework</li>
+<li>XXE in Java</li>
+</ul>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="december-2022">December 2022<a href="#december-2022" class="hash-link" aria-label="Direct link to December 2022" title="Direct link to December 2022">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="community-tier">Community tier<a href="#community-tier" class="hash-link" aria-label="Direct link to Community tier" title="Direct link to Community tier">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-rules-from-semgrep-community-and-semgrep-inc-2">New rules from Semgrep community and Semgrep, Inc<a href="#new-rules-from-semgrep-community-and-semgrep-inc-2" class="hash-link" aria-label="Direct link to New rules from Semgrep community and Semgrep, Inc" title="Direct link to New rules from Semgrep community and Semgrep, Inc">​</a></h4>
+<ul>
+<li>Thanks <a href="https://github.com/aabashkin" target="_blank" rel="noopener noreferrer">@aabashkin</a>! Added rule for MongoDB NoSQL Injection: <a href="https://semgrep.dev/r?q=java.mongodb.security.injection.audit.mongodb-nosqli" target="_blank">java.mongodb.security.injection.audit.mongodb-nosqli</a></li>
+<li>Thanks <a href="https://gihub.com/rc-mattschwager" target="_blank" rel="noopener noreferrer">@rc-mattschwager</a>! Added Rust security rules:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=rust.lang.security.args-os.args-os" target="_blank">rust.lang.security.args-os.args-os</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=rust.lang.security.args.args" target="_blank">rust.lang.security.args.args</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=rust.lang.security.current-exe.current-exe" target="_blank">rust.lang.security.current-exe.current-exe</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=rust.lang.security.insecure-hashes.insecure-hashes" target="_blank">rust.lang.security.insecure-hashes.insecure-hashes</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=rust.lang.security.reqwest-accept-invalid.reqwest-accept-invalid" target="_blank">rust.lang.security.reqwest-accept-invalid.reqwest-accept-invalid</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=rust.lang.security.reqwest-set-sensitive.reqwest-set-sensitive" target="_blank">rust.lang.security.reqwest-set-sensitive.reqwest-set-sensitive</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=rust.lang.security.rustls-dangerous.rustls-dangerous" target="_blank">rust.lang.security.rustls-dangerous.rustls-dangerous</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=rust.lang.security.ssl-verify-none.ssl-verify-none" target="_blank">rust.lang.security.ssl-verify-none.ssl-verify-none</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=rust.lang.security.temp-dir.temp-dir" target="_blank">rust.lang.security.temp-dir.temp-dir</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=rust.lang.security.unsafe-usage.unsafe-usage" target="_blank">rust.lang.security.unsafe-usage.unsafe-usage</a>
+</li>
+</ul>
+</li>
+<li>Thanks <a href="https://github.com/artem-fedorov" target="_blank" rel="noopener noreferrer">@artem-fedorov</a>! Fixed typos, spurious spaces and other formatting mistakes in many rules!</li>
+<li>Thanks <a href="https://github.com/nightshiba" target="_blank" rel="noopener noreferrer">@nightshiba</a>! Improved SSRF detection in Flask: <a href="https://semgrep.dev/r?q=python.flask.security.injection.ssrf-requests.ssrf-requests" target="_blank">python.flask.security.injection.ssrf-requests.ssrf-requests</a></li>
+<li>New rule for OS Command Injection in Argo workflows: <a href="https://semgrep.dev/r?q=yaml.argo.security.argo-workflow-parameter-command-injection.argo-workflow-parameter-command-injection" target="_blank">yaml.argo.security.argo-workflow-parameter-command-injection.argo-workflow-parameter-command-injection</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="updated-community-tier-rules">Updated community tier rules<a href="#updated-community-tier-rules" class="hash-link" aria-label="Direct link to Updated community tier rules" title="Direct link to Updated community tier rules">​</a></h4>
+<ul>
+<li>Thanks <a href="https://github.com/mpast" target="_blank" rel="noopener noreferrer">@mpast</a>! FP reduction in Terraform rules for AWS and Azure:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=terraform.aws.best-practice.missing-aws-lb-deletion-protection.missing-aws-lb-deletion-protection" target="_blank">terraform.aws.best-practice.missing-aws-lb-deletion-protection.missing-aws-lb-deletion-protection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=terraform.azure.best-practice.azure-keyvault-recovery-enabled.azure-keyvault-recovery-enabled" target="_blank">terraform.azure.best-practice.azure-keyvault-recovery-enabled.azure-keyvault-recovery-enabled</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=terraform.azure.security.azure-automation-encrypted.azure-automation-encrypted" target="_blank">terraform.azure.security.azure-automation-encrypted.azure-automation-encrypted</a>
+</li>
+</ul>
+</li>
+<li>Thanks <a href="https://github.com/ItsIgnacioPortal" target="_blank" rel="noopener noreferrer">@ItsIgnacioPortal</a>! Added external references: <a href="https://semgrep.dev/r?q=yaml.github-actions.security.workflow-run-target-code-checkout.workflow-run-target-code-checkout" target="_blank">yaml.github-actions.security.workflow-run-target-code-checkout.workflow-run-target-code-checkout</a></li>
+<li>FP reduction with additional sanitizers: <a href="https://semgrep.dev/r?q=javascript.sequelize.security.audit.sequelize-injection-express.express-sequelize-injection" target="_blank">javascript.sequelize.security.audit.sequelize-injection-express.express-sequelize-injection</a></li>
+<li>FP reduction with improved pattern for taint mode: <a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-open-redirect.express-open-redirect" target="_blank">javascript.express.security.audit.express-open-redirect.express-open-redirect</a></li>
+<li>FP reduction with improved pattern for taint mode: <a href="https://semgrep.dev/r?q=javascript.express.security.injection.tainted-sql-string.tainted-sql-string" target="_blank">javascript.express.security.injection.tainted-sql-string.tainted-sql-string</a></li>
+<li>Reduced severity: <a href="https://semgrep.dev/r?q=dockerfile.audit.dockerfile-source-not-pinned.dockerfile-source-not-pinned" target="_blank">dockerfile.audit.dockerfile-source-not-pinned.dockerfile-source-not-pinned</a></li>
+<li>Added external references:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=ocaml.lang.best-practice.ref.ocamllint-ref-incr" target="_blank">ocaml.lang.best-practice.ref.ocamllint-ref-incr</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.maintainability.useless-ifelse.useless-if-conditional" target="_blank">python.lang.maintainability.useless-ifelse.useless-if-conditional</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=terraform.aws.best-practice.missing-aws-lb-deletion-protection.missing-aws-lb-deletion-protection" target="_blank">terraform.aws.best-practice.missing-aws-lb-deletion-protection.missing-aws-lb-deletion-protection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=terraform.azure.best-practice.azure-keyvault-recovery-enabled.azure-keyvault-recovery-enabled" target="_blank">terraform.azure.best-practice.azure-keyvault-recovery-enabled.azure-keyvault-recovery-enabled</a>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="team-tier">Team tier<a href="#team-tier" class="hash-link" aria-label="Direct link to Team tier" title="Direct link to Team tier">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-and-updated-team-tier-rules">New and updated team tier rules<a href="#new-and-updated-team-tier-rules" class="hash-link" aria-label="Direct link to New and updated team tier rules" title="Direct link to New and updated team tier rules">​</a></h4>
+<p>New rules for hardcoded secrets:</p>
+<ul>
+<li>
+<p>Network libraries for Python and Java.</p>
+</li>
+<li>
+<p>Database libraries for Python.</p>
+</li>
+<li>
+<p>Generic secrets in JavaScript.</p>
+</li>
+<li>
+<p>New rules for Angular.</p>
+</li>
+<li>
+<p>New rules for SSRF in JavaScript.</p>
+</li>
+<li>
+<p>New rules for Open Redirect in JavaScript.</p>
+</li>
+<li>
+<p>Improve existing rules for React to cover more use cases.</p>
+</li>
+<li>
+<p>Improve existing rules for hardcoded secrets to cover more use cases.</p>
+</li>
+<li>
+<p>Improve existing rules for command injection in JavaScript to cover more use cases.</p>
+</li>
+<li>
+<p>FP reduction for existing rules for SQLi in JavaScript.</p>
+</li>
+<li>
+<p>FP reduction for existing rules for hardcoded secrets in Python.</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="november-2022">November 2022<a href="#november-2022" class="hash-link" aria-label="Direct link to November 2022" title="Direct link to November 2022">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="community-tier-1">Community tier<a href="#community-tier-1" class="hash-link" aria-label="Direct link to Community tier" title="Direct link to Community tier">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-rules-from-semgrep-community-and-semgrep-inc-3">New rules from Semgrep community and Semgrep, Inc<a href="#new-rules-from-semgrep-community-and-semgrep-inc-3" class="hash-link" aria-label="Direct link to New rules from Semgrep community and Semgrep, Inc" title="Direct link to New rules from Semgrep community and Semgrep, Inc">​</a></h4>
+<ul>
+<li>Thanks <a href="https://github.com/Sjord" target="_blank" rel="noopener noreferrer">@Sjord</a>! Added rule for links to plaintext URLs: <a href="https://semgrep.dev/r?q=html.security.plaintext-http-link.plaintext-http-link" target="_blank">html.security.plaintext-http-link.plaintext-http-link</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="updated-community-tier-rules-1">Updated community tier rules<a href="#updated-community-tier-rules-1" class="hash-link" aria-label="Direct link to Updated community tier rules" title="Direct link to Updated community tier rules">​</a></h4>
+<ul>
+<li>Thanks <a href="https://github.com/harmw" target="_blank" rel="noopener noreferrer">@harmw</a>! Match variations of auth token: <a href="https://semgrep.dev/r?q=detected-npm-registry-auth-token" target="_blank">detected-npm-registry-auth-token</a></li>
+<li>Thanks <a href="https://github.com/keeganparr1" target="_blank" rel="noopener noreferrer">@keeganparr1</a>! Arbitrary send ERC20: <a href="https://semgrep.dev/r?q=solidity.security.arbitrary-send-erc20.arbitrary-send-erc20" target="_blank">solidity.security.arbitrary-send-erc20.arbitrary-send-erc20</a></li>
+<li>Thanks <a href="https://github.com/lnobrega-canarie" target="_blank" rel="noopener noreferrer">@lnobrega-canarie</a>! Allow a template variable in the nonce attribute of a script tag: <a href="https://semgrep.dev/r?q=python.django.security.audit.xss.var-in-script-tag.var-in-script-tag" target="_blank">python.django.security.audit.xss.var-in-script-tag.var-in-script-tag</a></li>
+<li>Thanks <a href="https://github.com/objectified" target="_blank" rel="noopener noreferrer">@objectified</a>! Ignore cookies created by Spring&#x27;s ResponseCookie builder:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.audit.cookie-missing-httponly.cookie-missing-httponly" target="_blank">java.lang.security.audit.cookie-missing-httponly.cookie-missing-httponly</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.audit.cookie-missing-secure-flag.cookie-missing-secure-flag" target="_blank">java.lang.security.audit.cookie-missing-secure-flag.cookie-missing-secure-flag</a>
+</li>
+</ul>
+</li>
+<li>Thanks <a href="https://github.com/kepten" target="_blank" rel="noopener noreferrer">@kepten</a>! Update missing-integrity rule to handle HTML tags with newlines properly to reduce false positives: <a href="https://semgrep.dev/r?q=html.security.audit.missing-integrity.missing-integrity" target="_blank">html.security.audit.missing-integrity.missing-integrity</a></li>
+<li>FP reduction using taint analysis:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.audit.xxe.documentbuilderfactory-disallow-doctype-decl-missing.documentbuilderfactory-disallow-doctype-decl-missing" target="_blank">java.lang.security.audit.xxe.documentbuilderfactory-disallow-doctype-decl-missing.documentbuilderfactory-disallow-doctype-decl-missing</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.lang.correctness.use-filepath-join.use-filepath-join" target="_blank">go.lang.correctness.use-filepath-join.use-filepath-join</a>
+</li>
+<li>Thanks to <a href="https://github.com/ianmuscat" target="_blank" rel="noopener noreferrer">@ianmuscat</a> for reporting this! <a href="https://semgrep.dev/r?q=php.lang.security.file-inclusion.file-inclusion" target="_blank">php.lang.security.file-inclusion.file-inclusion</a></li>
+</ul>
+</li>
+<li>Improve autofix by leveraging new <a href="https://semgrep.dev/blog/2022/autofixing-code-with-semgrep/" target="_blank" rel="noopener noreferrer">AST-based fixes</a>:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.dompurify.harden-dompurify-usage" target="_blank">javascript.dompurify.harden-dompurify-usage</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.flask.best-practice.use-jsonify.use-jsonify" target="_blank">python.flask.best-practice.use-jsonify.use-jsonify</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.flask.security.xss.audit.template-unquoted-attribute-var.template-unquoted-attribute-var" target="_blank">python.flask.security.xss.audit.template-unquoted-attribute-var.template-unquoted-attribute-var</a>
+</li>
+</ul>
+</li>
+<li>FP reduction using typed metavariables: <a href="https://semgrep.dev/r?q=java.lang.security.audit.command-injection-formatted-runtime-call.command-injection-formatted-runtime-call" target="_blank">java.lang.security.audit.command-injection-formatted-runtime-call.command-injection-formatted-runtime-call</a></li>
+<li>Support shebang contexts for finding dangerous command executions: <a href="https://semgrep.dev/r?q=go.lang.security.audit.dangerous-exec-command.dangerous-exec-command" target="_blank">go.lang.security.audit.dangerous-exec-command.dangerous-exec-command</a></li>
+<li>Filter localhost in Python rules for requests:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.insecure-transport.requests.request-with-http.request-with-http" target="_blank">python.lang.security.audit.insecure-transport.requests.request-with-http.request-with-http</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.insecure-transport.requests.request-session-with-http.request-session-with-http" target="_blank">python.lang.security.audit.insecure-transport.requests.request-session-with-http.request-session-with-http</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.insecure-transport.requests.request-session-http-in-with-context.request-session-http-in-with-context" target="_blank">python.lang.security.audit.insecure-transport.requests.request-session-http-in-with-context.request-session-http-in-with-context</a>
+</li>
+</ul>
+</li>
+<li>Added autofix:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.audit.crypto.use-of-md5.use-of-md5" target="_blank">java.lang.security.audit.crypto.use-of-md5.use-of-md5</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.audit.crypto.use-of-md5-digest-utils.use-of-md5-digest-utils" target="_blank">java.lang.security.audit.crypto.use-of-md5-digest-utils.use-of-md5-digest-utils</a>
+</li>
+</ul>
+</li>
+<li>Improved external documentation references: <a href="https://semgrep.dev/r?q=javascript.lang.security.insecure-object-assign.insecure-object-assign" target="_blank">javascript.lang.security.insecure-object-assign.insecure-object-assign</a></li>
+<li>FP reduction by adding support for matching tuples in Python subprocess functions: <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit" target="_blank">python.lang.security.audit.dangerous-subprocess-use-audit.dangerous-subprocess-use-audit</a></li>
+<li>Improve dockerfile rule to handle the <code>--frozen-lockfile</code> argument. Thanks <a href="https://github.com/ianmuscat" target="_blank" rel="noopener noreferrer">@ianmuscat</a> for reporting this! <a href="https://semgrep.dev/r?q=generic.ci.security.use-frozen-lockfile.use-frozen-lockfile-yarn" target="_blank">generic.ci.security.use-frozen-lockfile.use-frozen-lockfile-yarn</a></li>
+<li>FP reduction Java cookie rules. Thanks to <a href="https://github.com/peter17" target="_blank" rel="noopener noreferrer">@peter17</a> for reporting this! <a href="https://semgrep.dev/r?q=java.lang.security.audit.cookie-missing-samesite.cookie-missing-samesite" target="_blank">java.lang.security.audit.cookie-missing-samesite.cookie-missing-samesite</a></li>
+<li>FP reduction with improved patterns for <code>DocumentBuilderFactory</code>. Thanks <a href="https://github.com/coheigea" target="_blank" rel="noopener noreferrer">@coheigea</a> for reporting this! <a href="https://semgrep.dev/r?q=java.lang.security.audit.xxe.documentbuilderfactory-disallow-doctype-decl-missing.documentbuilderfactory-disallow-doctype-decl-missing" target="_blank">java.lang.security.audit.xxe.documentbuilderfactory-disallow-doctype-decl-missing.documentbuilderfactory-disallow-doctype-decl-missing</a></li>
+</ul>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>Metadata required by security category</div><div class="admonitionContent_BuS1"><p>All security rules now adopt an improved set of metadata fields. These fields are required when you contribute to Semgrep Registry with rules in security category. For more details, see <a href="/semgrep-docs/contributing/contributing-to-semgrep-rules-repository#fields-required-by-the-security-category">Including fields required by security category</a> section.</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="team-tier-1">Team tier<a href="#team-tier-1" class="hash-link" aria-label="Direct link to Team tier" title="Direct link to Team tier">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-and-updated-team-tier-rules-1">New and updated team tier rules<a href="#new-and-updated-team-tier-rules-1" class="hash-link" aria-label="Direct link to New and updated team tier rules" title="Direct link to New and updated team tier rules">​</a></h4>
+<p>New rules for hardcoded secrets:</p>
+<ul>
+<li>
+<p>Database libraries for Python.</p>
+</li>
+<li>
+<p>Database libraries for JavaScript and TypeScript.</p>
+</li>
+<li>
+<p>Improve existing rules for hardcoded secrets to cover more use cases.</p>
+</li>
+<li>
+<p>FP reduction for existing rules for hardcoded secrets.</p>
+</li>
+<li>
+<p>FP reduction for Go net/http rules.</p>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="october-2022">October 2022<a href="#october-2022" class="hash-link" aria-label="Direct link to October 2022" title="Direct link to October 2022">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="community-tier-2">Community tier<a href="#community-tier-2" class="hash-link" aria-label="Direct link to Community tier" title="Direct link to Community tier">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-rules-from-semgrep-community-and-semgrep-inc-4">New rules from Semgrep community and Semgrep, Inc<a href="#new-rules-from-semgrep-community-and-semgrep-inc-4" class="hash-link" aria-label="Direct link to New rules from Semgrep community and Semgrep, Inc" title="Direct link to New rules from Semgrep community and Semgrep, Inc">​</a></h4>
+<ul>
+<li>Thanks <a href="https://github.com/mtausig" target="_blank" rel="noopener noreferrer">@mtausig</a>! <a href="https://semgrep.dev/r?q=csharp.dotnet.security.use_weak_rsa_encryption_padding" target="_blank">csharp.dotnet.security.use_weak_rsa_encryption_padding</a></li>
+<li>Thanks <a href="https://github.com/sjord" target="_blank" rel="noopener noreferrer">@Sjord</a>! <a href="https://semgrep.dev/r?q=php.lang.security.redirect-to-request-uri" target="_blank">php.lang.security.redirect-to-request-uri</a></li>
+<li>
+<a href="https://semgrep.dev/r?q=yaml.github-actions.security.workflow-run-target-code-checkout" target="_blank">yaml.github-actions.security.workflow-run-target-code-checkout</a>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="updated-community-tier-rules-2">Updated community tier rules<a href="#updated-community-tier-rules-2" class="hash-link" aria-label="Direct link to Updated community tier rules" title="Direct link to Updated community tier rules">​</a></h4>
+<ul>
+<li>Fixed issue where false positives were reported with multiple consecutive <code>&lt;link&gt;</code> tags in: <a href="https://semgrep.dev/r?q=html.security.audit.missing-integrity" target="_blank">html.security.audit.missing-integrity</a></li>
+<li>Capture additional case when <code>ssl._create_unverified_context</code> is reassigned indirectly: <a href="https://semgrep.dev/r?q=python.lang.security.unverified-ssl-context" target="_blank">python.lang.security.unverified-ssl-context</a></li>
+<li>Filter case when a <code>dynamic</code> block is used inside <code>aws_eks_cluster</code>: <a href="https://semgrep.dev/r?q=terraform.lang.security.eks-insufficient-control-plane-logging" target="_blank">terraform.lang.security.eks-insufficient-control-plane-logging</a></li>
+<li>Fixed an issue where the rule was not properly scoped to Azure resources: <a href="https://semgrep.dev/r?q=terraform.azure.security.appservice.appservice-use-secure-tls-policy" target="_blank">terraform.azure.security.appservice.appservice-use-secure-tls-policy</a></li>
+<li>Filter case when only static strings are used: <a href="https://semgrep.dev/r?q=javascript.browser.security.raw-html-join" target="_blank">javascript.browser.security.raw-html-join</a></li>
+<li>Filter case when the user input is used as an index to a map: <a href="https://semgrep.dev/r?q=ruby.rails.security.brakeman.check-render-local-file-include" target="_blank">ruby.rails.security.brakeman.check-render-local-file-include</a></li>
+<li>FP reduction by removing an unnecessary unanchored pattern: <a href="https://semgrep.dev/r?q=ruby.rails.security.audit.avoid-tainted-shell-call" target="_blank">ruby.rails.security.audit.avoid-tainted-shell-call</a></li>
+<li>Scope Laravel cookie rules to only scan inside files named <code>*session.php</code>:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=php.laravel.security.laravel-cookie-http-only" target="_blank">php.laravel.security.laravel-cookie-http-only</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=php.laravel.security.laravel-cookie-long-timeout" target="_blank">php.laravel.security.laravel-cookie-long-timeout</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=php.laravel.security.laravel-cookie-null-domain" target="_blank">php.laravel.security.laravel-cookie-null-domain</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=php.laravel.security.laravel-cookie-same-site" target="_blank">php.laravel.security.laravel-cookie-same-site</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=php.laravel.security.laravel-cookie-secure-set" target="_blank">php.laravel.security.laravel-cookie-secure-set</a>
+</li>
+</ul>
+</li>
+<li>Add additional taint sources: <a href="https://semgrep.dev/r?q=php.laravel.security.laravel-unsafe-validator" target="_blank">php.laravel.security.laravel-unsafe-validator</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="team-tier-2">Team tier<a href="#team-tier-2" class="hash-link" aria-label="Direct link to Team tier" title="Direct link to Team tier">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-team-rules">New team rules<a href="#new-team-rules" class="hash-link" aria-label="Direct link to New team rules" title="Direct link to New team rules">​</a></h4>
+<p>New rules for the Laravel PHP framework covering the following vulnerability classes:</p>
+<ul>
+<li>Code injection</li>
+<li>Command injection</li>
+<li>SQL injection</li>
+<li>Path traversal</li>
+<li>CSRF</li>
+<li>Cookie security</li>
+<li>XSS</li>
+<li>SSRF</li>
+</ul>
+<p>New rules for Go net/http package covering the following vulnerability classes:</p>
+<ul>
+<li>SQL injection</li>
+<li>Command injection</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="september-2022">September 2022<a href="#september-2022" class="hash-link" aria-label="Direct link to September 2022" title="Direct link to September 2022">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="community-tier-3">Community tier<a href="#community-tier-3" class="hash-link" aria-label="Direct link to Community tier" title="Direct link to Community tier">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-rules-from-semgrep-community-and-semgrep-inc-5">New rules from Semgrep community and Semgrep, Inc<a href="#new-rules-from-semgrep-community-and-semgrep-inc-5" class="hash-link" aria-label="Direct link to New rules from Semgrep community and Semgrep, Inc" title="Direct link to New rules from Semgrep community and Semgrep, Inc">​</a></h4>
+<ul>
+<li>100+ new Terraform rules for GCP! Thanks @mertcoskuner!</li>
+<li>Python crypto operations with HMAC. Thanks @luisfontes19!<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=python.cryptography.security.mode-without-authentication" target="_blank">python.cryptography.security.mode-without-authentication</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pycryptodome.security.mode-without-authentication" target="_blank">python.pycryptodome.security.mode-without-authentication</a>
+</li>
+</ul>
+</li>
+<li>Spring actuator rules. Thanks @malexmave!<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.audit.spring-actuator-fully-enabled-yaml" target="_blank">java.spring.security.audit.spring-actuator-fully-enabled-yaml</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.audit.spring-actuator-fully-enabled" target="_blank">java.spring.security.audit.spring-actuator-fully-enabled</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.audit.spring-actuator-non-health-enabled-yaml" target="_blank">java.spring.security.audit.spring-actuator-non-health-enabled-yaml</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.spring.security.audit.spring-actuator-non-health-enabled" target="_blank">java.spring.security.audit.spring-actuator-non-health-enabled</a>
+</li>
+</ul>
+</li>
+<li>Rule for persistent secrets in Docker images. Thanks @Sjord!: <a href="https://semgrep.dev/r?q=dockerfile.security.secret-in-build-arg" target="_blank">dockerfile.security.secret-in-build-arg</a></li>
+<li>Rule for GitHub Actions script injection: <a href="https://semgrep.dev/r?q=yaml.github-actions.security.github-script-injection" target="_blank">yaml.github-actions.security.github-script-injection</a></li>
+<li>PHP XSS rule: <a href="https://semgrep.dev/r?q=php.lang.security.injection.echoed-request" target="_blank">php.lang.security.injection.echoed-request</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="changed-community-tier-rules">Changed community tier rules<a href="#changed-community-tier-rules" class="hash-link" aria-label="Direct link to Changed community tier rules" title="Direct link to Changed community tier rules">​</a></h4>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="new-metadata-keys">New metadata keys<a href="#new-metadata-keys" class="hash-link" aria-label="Direct link to New metadata keys" title="Direct link to New metadata keys">​</a></h5>
+<p>Semgrep, Inc is adding new metadata fields to better communicate the intent and importance of findings that a rule generates. The following list provides details about new metadata fields:</p>
+<ul>
+<li><strong>Likelihood</strong>: How likely is the impact highlighted by this finding to occur? Examples:<!-- -->
+<ul>
+<li>Web application user input: HIGH</li>
+<li>OS environment: MEDIUM</li>
+</ul>
+</li>
+<li><strong>Impact</strong>: How much damage can this issue cause? Examples:<!-- -->
+<ul>
+<li>SQL Injection: HIGH</li>
+<li>Information disclosure: LOW</li>
+</ul>
+</li>
+<li><strong>Confidence</strong>: How confident is the author that this finding is exploitable? Examples:<!-- -->
+<ul>
+<li>User input + formatted SQL string + SQL sink + no intermediate function calls: HIGH</li>
+<li>User input + SQL sink: MEDIUM</li>
+<li>Formatted SQL string: LOW</li>
+</ul>
+</li>
+<li><strong>Subcategory</strong>: A list of subcategories that allows the author to specify the intent of the rule. Current values are:<!-- -->
+<ul>
+<li><strong>Audit</strong>: This rule indicates the possible presence of a vulnerability, provided other conditions are present</li>
+<li><strong>Vuln</strong>: This rule is specifically looking for an exploitable vulnerability</li>
+</ul>
+</li>
+<li>Addtionally, language rulesets (such as <code>p/javascript</code>) have been altered to include only rules that match the following conditions:<!-- -->
+<ul>
+<li>Subcategory: Vuln</li>
+<li>Impact: HIGH</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="updated-community-tier-rules-3">Updated community tier rules<a href="#updated-community-tier-rules-3" class="hash-link" aria-label="Direct link to Updated community tier rules" title="Direct link to Updated community tier rules">​</a></h4>
+<ul>
+<li>PyYAML rule updated for modern versions of PyYAML. This can lower the occurence of false positive findings. Thanks @shivankar-madaan: python.lang.security.deserialization.avoid-pyyaml-load</li>
+<li>Added new case for C use-after-free where freed var is used in conditional. Thanks @zhengsidie. c.lang.security.use-after-free</li>
+<li>Additional user input added. Thanks @jbergler! ruby.lang.security.no-eval</li>
+<li>Reduced false positives by filtering safe attributes. Thanks @luisfontes19! python.flask.security.open-redirect</li>
+<li>Filtered false positive cases from:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=generic.secrets.security.detected-slack-webhook" target="_blank">generic.secrets.security.detected-slack-webhook</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.jax-rs.security.insecure-resteasy" target="_blank">java.jax-rs.security.insecure-resteasy</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.xss.direct-response-write" target="_blank">javascript.express.security.audit.xss.direct-response-write</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-open-redirect" target="_blank">javascript.express.security.audit.express-open-redirect</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ruby.rails.security.injection.tainted-sql-string" target="_blank">ruby.rails.security.injection.tainted-sql-string</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ruby.rails.security.brakeman.check-regex-dos" target="_blank">ruby.rails.security.brakeman.check-regex-dos</a>
+</li>
+</ul>
+</li>
+<li>Autofix added to the following rules:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=c.lang.correctness.c-string-equality" target="_blank">c.lang.correctness.c-string-equality</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.lang.correctness.sslcertificatetrust.sslcertificatetrust-handshake-no-trust" target="_blank">csharp.lang.correctness.sslcertificatetrust.sslcertificatetrust-handshake-no-trust</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=dockerfile.best-practice.maintainer-is-deprecated" target="_blank">dockerfile.best-practice.maintainer-is-deprecated</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=dockerfile.best-practice.use-shell-instruction" target="_blank">dockerfile.best-practice.use-shell-instruction</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.ci.security.use-frozen-lockfile" target="_blank">generic.ci.security.use-frozen-lockfile</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.lang.security.audit.net.use-tls" target="_blank">go.lang.security.audit.net.use-tls</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.lang.security.filepath-clean-misuse" target="_blank">go.lang.security.filepath-clean-misuse</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.audit.cbc-padding-oracle" target="_blank">java.lang.security.audit.cbc-padding-oracle</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.audit.crypto.des-is-deprecated" target="_blank">java.lang.security.audit.crypto.des-is-deprecated</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.dompurify" target="_blank">javascript.dompurify</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.distributed.security" target="_blank">python.distributed.security</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.django.security.audit.unvalidated-password" target="_blank">python.django.security.audit.unvalidated-password</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.jinja2.security.audit.autoescape-disabled-false" target="_blank">python.jinja2.security.audit.autoescape-disabled-false</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.jinja2.security.audit.missing-autoescape-disabled" target="_blank">python.jinja2.security.audit.missing-autoescape-disabled</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.correctness.exit" target="_blank">python.lang.correctness.exit</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.correctness.unchecked-returns" target="_blank">python.lang.correctness.unchecked-returns</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pyramid.audit.authtkt-cookie-httponly-unsafe-value" target="_blank">python.pyramid.audit.authtkt-cookie-httponly-unsafe-value</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pyramid.audit.authtkt-cookie-samesite" target="_blank">python.pyramid.audit.authtkt-cookie-samesite</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pyramid.audit.authtkt-cookie-secure-unsafe-value" target="_blank">python.pyramid.audit.authtkt-cookie-secure-unsafe-value</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pyramid.audit.csrf-check-disabled" target="_blank">python.pyramid.audit.csrf-check-disabled</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pyramid.audit.csrf-origin-check-disabled-globally" target="_blank">python.pyramid.audit.csrf-origin-check-disabled-globally</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pyramid.audit.csrf-origin-check-disabled" target="_blank">python.pyramid.audit.csrf-origin-check-disabled</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pyramid.audit.set-cookie-httponly-unsafe-value" target="_blank">python.pyramid.audit.set-cookie-httponly-unsafe-value</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pyramid.audit.set-cookie-samesite-unsafe-value" target="_blank">python.pyramid.audit.set-cookie-samesite-unsafe-value</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pyramid.audit.set-cookie-secure-unsafe-value" target="_blank">python.pyramid.audit.set-cookie-secure-unsafe-value</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pyramid.security.csrf-check-disabled-globally" target="_blank">python.pyramid.security.csrf-check-disabled-globally</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.requests.best-practice.use-response-json-shortcut" target="_blank">python.requests.best-practice.use-response-json-shortcut</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ruby.lang.security.bad-deserialization-yaml" target="_blank">ruby.lang.security.bad-deserialization-yaml</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ruby.rails.correctness.rails-no-render-after-save" target="_blank">ruby.rails.correctness.rails-no-render-after-save</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=yaml.kubernetes.best-practice.no-fractional-cpu-limits" target="_blank">yaml.kubernetes.best-practice.no-fractional-cpu-limits</a>
+</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="deprecated-community-tier-rules">Deprecated community tier rules<a href="#deprecated-community-tier-rules" class="hash-link" aria-label="Direct link to Deprecated community tier rules" title="Direct link to Deprecated community tier rules">​</a></h4>
+<p>These rules no longer produce findings:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.detect-non-literal-require" target="_blank">javascript.lang.security.detect-non-literal-require</a>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="august-2022">August 2022<a href="#august-2022" class="hash-link" aria-label="Direct link to August 2022" title="Direct link to August 2022">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="community-tier-4">Community tier<a href="#community-tier-4" class="hash-link" aria-label="Direct link to Community tier" title="Direct link to Community tier">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-rules-from-semgrep-community-and-semgrep-inc-6">New rules from Semgrep community and Semgrep, Inc<a href="#new-rules-from-semgrep-community-and-semgrep-inc-6" class="hash-link" aria-label="Direct link to New rules from Semgrep community and Semgrep, Inc" title="Direct link to New rules from Semgrep community and Semgrep, Inc">​</a></h4>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.lang.security.ad.jwt-tokenvalidationparameters-no-expiry-validation.jwt-tokenvalidationparameters-no-expiry-validation" target="_blank">csharp.lang.security.ad.jwt-tokenvalidationparameters-no-expiry-validation.jwt-tokenvalidationparameters-no-expiry-validation</a>
+</li>
+<li>Thanks @securecodeninja! <a href="https://semgrep.dev/r?q=jwt-securitytoken-no-expiration.jwt-securitytoken-no-expiration" target="_blank">jwt-securitytoken-no-expiration.jwt-securitytoken-no-expiration</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="updated-community-tier-rules-4">Updated community tier rules<a href="#updated-community-tier-rules-4" class="hash-link" aria-label="Direct link to Updated community tier rules" title="Direct link to Updated community tier rules">​</a></h4>
+<ul>
+<li>Fixed taint source to focus on function argument in <a href="https://semgrep.dev/r?q=csharp.dotnet.security.audit.mass-assignment.mass-assignment" target="_blank">csharp.dotnet.security.audit.mass-assignment.mass-assignment</a>.</li>
+<li>Updated various secrets-related rules:<!-- -->
+<ul>
+<li>Added more patterns for hardcoded secrets in <code>express-session</code> <a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-session-hardcoded-secret.express-session-hardcoded-secret" target="_blank">javascript.express.security.audit.express-session-hardcoded-secret.express-session-hardcoded-secret</a>.</li>
+<li>Added more import patterns to catch more cases <a href="https://semgrep.dev/r?q=javascript.express.security.express-jwt-hardcoded-secret.express-jwt-hardcoded-secret" target="_blank">javascript.express.security.express-jwt-hardcoded-secret.express-jwt-hardcoded-secret</a>.</li>
+<li>Changed from ERROR to WARNING <a href="https://semgrep.dev/r?q=javascript.jose.security.jwt-hardcode.hardcoded-jwt-secret" target="_blank">javascript.jose.security.jwt-hardcode.hardcoded-jwt-secret</a>.</li>
+<li>Updated to highlight smaller, relevant ranges of code:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=java.java-jwt.security.jwt-hardcode.java-jwt-hardcoded-secret" target="_blank">java.java-jwt.security.jwt-hardcode.java-jwt-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=terraform.aws.security.aws-provider-static-credentials.aws-provider-static-credentials" target="_blank">terraform.aws.security.aws-provider-static-credentials.aws-provider-static-credentials</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=terraform.aws.security.aws-lambda-environment-credentials.aws-lambda-environment-credentials" target="_blank">terraform.aws.security.aws-lambda-environment-credentials.aws-lambda-environment-credentials</a>
+</li>
+</ul>
+</li>
+<li>False positive (FP) reduction, updated in taint mode to provide more context:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=go.jwt-go.security.jwt.hardcoded-jwt-key" target="_blank">go.jwt-go.security.jwt.hardcoded-jwt-key</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.jsonwebtoken.security.jwt-hardcode.hardcoded-jwt-secret" target="_blank">javascript.jsonwebtoken.security.jwt-hardcode.hardcoded-jwt-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.boto3.security.hardcoded-token.hardcoded-token" target="_blank">python.boto3.security.hardcoded-token.hardcoded-token</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated to work with multi flags such as <code>-yqq</code> in <a href="https://semgrep.dev/r?q=dockerfile.correctness.missing-assume-yes-switch.missing-assume-yes-switch" target="_blank">dockerfile.correctness.missing-assume-yes-switch.missing-assume-yes-switch</a>.</li>
+<li>Updated to taint mode and added more filesystem sources <a href="https://semgrep.dev/r?q=javascript.lang.security.audit.detect-non-literal-fs-filename.detect-non-literal-fs-filename" target="_blank">javascript.lang.security.audit.detect-non-literal-fs-filename.detect-non-literal-fs-filename</a>.</li>
+<li>Restricted sources to remove unlikely user input <a href="https://semgrep.dev/r?q=ruby.rails.security.audit.avoid-tainted-shell-call.avoid-tainted-shell-call" target="_blank">ruby.rails.security.audit.avoid-tainted-shell-call.avoid-tainted-shell-call</a>.</li>
+<li>Added a pattern for <code>escapeHtml={false}</code> <a href="https://semgrep.dev/r?q=typescript.react.security.react-markdown-insecure-html.react-markdown-insecure-html" target="_blank">typescript.react.security.react-markdown-insecure-html.react-markdown-insecure-html</a>.</li>
+<li>Added a pattern for detecting manual user-supplied inputs <a href="https://semgrep.dev/r?q=yaml.github-actions.security.run-shell-injection.run-shell-injection" target="_blank">yaml.github-actions.security.run-shell-injection.run-shell-injection</a>.</li>
+<li>Updated to highlight smaller, relevant ranges of code:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=ruby.lang.security.hardcoded-http-auth-in-controller.hardcoded-http-auth-in-controller" target="_blank">ruby.lang.security.hardcoded-http-auth-in-controller.hardcoded-http-auth-in-controller</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ruby.rails.security.injection.tainted-sql-string.tainted-sql-string" target="_blank">ruby.rails.security.injection.tainted-sql-string.tainted-sql-string</a>
+</li>
+</ul>
+</li>
+<li>FP reduction: updated to taint mode to provide more context:<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.xss.direct-response-write.direct-response-write" target="_blank">javascript.express.security.audit.xss.direct-response-write.direct-response-write</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp" target="_blank">javascript.lang.security.audit.detect-non-literal-regexp.detect-non-literal-regexp</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.detect-child-process.detect-child-process" target="_blank">javascript.lang.security.detect-child-process.detect-child-process</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.passport-jwt.security.passport-hardcode.hardcoded-passport-secret" target="_blank">javascript.passport-jwt.security.passport-hardcode.hardcoded-passport-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-unsanitized-method.react-unsanitized-method" target="_blank">typescript.react.security.audit.react-unsanitized-method.react-unsanitized-method</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-unsanitized-property.react-unsanitized-property" target="_blank">typescript.react.security.audit.react-unsanitized-property.react-unsanitized-property</a>
+</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="deprecated-community-tier-rules-1">Deprecated community tier rules<a href="#deprecated-community-tier-rules-1" class="hash-link" aria-label="Direct link to Deprecated community tier rules" title="Direct link to Deprecated community tier rules">​</a></h4>
+<p>Semgrep does no longer match anything with the following rules:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.jose.security.jwt-exposed-credentials.jwt-exposed-credentials" target="_blank">javascript.jose.security.jwt-exposed-credentials.jwt-exposed-credentials</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.jsonwebtoken.security.jwt-exposed-credentials.jwt-exposed-credentials" target="_blank">javascript.jsonwebtoken.security.jwt-exposed-credentials.jwt-exposed-credentials</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.audit.non-constant-sql-query.non-constant-sql-query" target="_blank">javascript.lang.security.audit.non-constant-sql-query.non-constant-sql-query</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.django.security.audit.xss.template-translate-no-escape.template-translate-no-escape" target="_blank">python.django.security.audit.xss.template-translate-no-escape.template-translate-no-escape</a>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="team-tier-3">Team tier<a href="#team-tier-3" class="hash-link" aria-label="Direct link to Team tier" title="Direct link to Team tier">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="new-team-tier-rules">New Team tier rules<a href="#new-team-tier-rules" class="hash-link" aria-label="Direct link to New Team tier rules" title="Direct link to New Team tier rules">​</a></h4>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.express-child-process.express-child-process" target="_blank">javascript.express.express-child-process.express-child-process</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.express-fs-filename.express-fs-filename" target="_blank">javascript.express.express-fs-filename.express-fs-filename</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=typescript.typescript.node.security.node-rsa-weak-key.node-rsa-weak-key" target="_blank">typescript.typescript.node.security.node-rsa-weak-key.node-rsa-weak-key</a>
+</li>
+<li>
+<p>New Go rules:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=go.net.active-debug-code.print-stack-trace.print-stack-trace" target="_blank">go.net.active-debug-code.print-stack-trace.print-stack-trace</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.net.active-debug-code.write-pprof-profile-output.write-pprof-profile-output" target="_blank">go.net.active-debug-code.write-pprof-profile-output.write-pprof-profile-output</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.net.command-injection.net-http-command-injection-taint.net-http-command-injection-taint" target="_blank">go.net.command-injection.net-http-command-injection-taint.net-http-command-injection-taint</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.net.sql.go-vanillasql-format-string-sqli-taint.go-vanillasql-format-string-sqli-taint" target="_blank">go.net.sql.go-vanillasql-format-string-sqli-taint.go-vanillasql-format-string-sqli-taint</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.net.sql.pg-orm-sqli-taint.pg-orm-sqli-taint" target="_blank">go.net.sql.pg-orm-sqli-taint.pg-orm-sqli-taint</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.net.sql.pg-sqli-taint.pg-sqli-taint" target="_blank">go.net.sql.pg-sqli-taint.pg-sqli-taint</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.net.sql.pgx-sqli-taint.pgx-sqli-taint" target="_blank">go.net.sql.pgx-sqli-taint.pgx-sqli-taint</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.net.ssrf.http-ssrf-taint.http-ssrf-taint" target="_blank">go.net.ssrf.http-ssrf-taint.http-ssrf-taint</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.net.xss.formatted-template-string-taint.formatted-template-string-taint" target="_blank">go.net.xss.formatted-template-string-taint.formatted-template-string-taint</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.net.xss.no-direct-write-to-responsewriter-taint.no-direct-write-to-responsewriter-taint" target="_blank">go.net.xss.no-direct-write-to-responsewriter-taint.no-direct-write-to-responsewriter-taint</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=go.net.xxe.libxml2-xxe-taint.libxml2-xxe-taint" target="_blank">go.net.xxe.libxml2-xxe-taint.libxml2-xxe-taint</a>
+</li>
+</ul>
+</li>
+<li>
+<p>New secrets detection rules which try to resolve cases with hardcoded strings used as a secrets in code:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.jwt-dotnet.jwt-dotnet-hardcoded-secret.jwt-dotnet-hardcoded-secret" target="_blank">csharp.jwt-dotnet.jwt-dotnet-hardcoded-secret.jwt-dotnet-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.lang.security.system.directoryentry-hardcoded-secret.directoryentry-hardcoded-secret" target="_blank">csharp.lang.security.system.directoryentry-hardcoded-secret.directoryentry-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.lang.security.system.networkcredential-hardcoded-secret.networkcredential-hardcoded-secret" target="_blank">csharp.lang.security.system.networkcredential-hardcoded-secret.networkcredential-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.lang.security.system.oracleconnectionstringbuilder-hardcoded-secret.oracleconnectionstringbuilder-hardcoded-secret" target="_blank">csharp.lang.security.system.oracleconnectionstringbuilder-hardcoded-secret.oracleconnectionstringbuilder-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.lang.security.system.passwordauthenticationmethod-hardcoded-secret.passwordauthenticationmethod-hardcoded-secret" target="_blank">csharp.lang.security.system.passwordauthenticationmethod-hardcoded-secret.passwordauthenticationmethod-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.lang.security.system.sqlconnection-hardcoded-secret.sqlconnection-hardcoded-secret" target="_blank">csharp.lang.security.system.sqlconnection-hardcoded-secret.sqlconnection-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.lang.security.system.sqlconnectionstringbuilder-hardcoded-secret.sqlconnectionstringbuilder-hardcoded-secret" target="_blank">csharp.lang.security.system.sqlconnectionstringbuilder-hardcoded-secret.sqlconnectionstringbuilder-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.mongo.csharp-mongo-hardcoded-secret.csharp-mongo-hardcoded-secret" target="_blank">csharp.mongo.csharp-mongo-hardcoded-secret.csharp-mongo-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.postgres.npgsqlconnectionstringbuilder-hardcoded-secret.npgsqlconnectionstringbuilder-hardcoded-secret" target="_blank">csharp.postgres.npgsqlconnectionstringbuilder-hardcoded-secret.npgsqlconnectionstringbuilder-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.jsch.jsch-hardcoded-secret.jsch-hardcoded-secret" target="_blank">java.jsch.jsch-hardcoded-secret.jsch-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.properties.properties-hardcoded-secret.properties-hardcoded-secret" target="_blank">java.lang.security.properties.properties-hardcoded-secret.properties-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.sql.drivermanager-hardcoded-secret.drivermanager-hardcoded-secret" target="_blank">java.lang.security.sql.drivermanager-hardcoded-secret.drivermanager-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.lang.security.system.system-setproperty-hardcoded-secret.system-setproperty-hardcoded-secret" target="_blank">java.lang.security.system.system-setproperty-hardcoded-secret.system-setproperty-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.mongo.java-mongo-hardcoded-secret.java-mongo-hardcoded-secret" target="_blank">java.mongo.java-mongo-hardcoded-secret.java-mongo-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=java.mysql.mysql-jdbc-hardcoded-secret.mysql-jdbc-hardcoded-secret" target="_blank">java.mysql.mysql-jdbc-hardcoded-secret.mysql-jdbc-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.knex.node-knex-hardcoded-secret.node-knex-hardcoded-secret" target="_blank">javascript.knex.node-knex-hardcoded-secret.node-knex-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.mongoose.node-mongoose-hardcoded-secret.node-mongoose-hardcoded-secret" target="_blank">javascript.mongoose.node-mongoose-hardcoded-secret.node-mongoose-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.mssql.node-mysql-hardcoded-secret.node-mssql-hardcoded-secret" target="_blank">javascript.mssql.node-mysql-hardcoded-secret.node-mssql-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.mysql.node-mysql-hardcoded-secret.node-mysql-hardcoded-secret" target="_blank">javascript.mysql.node-mysql-hardcoded-secret.node-mysql-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.pg.node-pg-hardcoded-secret.node-pg-hardcoded-secret" target="_blank">javascript.pg.node-pg-hardcoded-secret.node-pg-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.sequelize.node-sequelize-hardcoded-secret.node-sequelize-hardcoded-secret" target="_blank">javascript.sequelize.node-sequelize-hardcoded-secret.node-sequelize-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.ldap3.python-ldap3-hardcoded-secret.python-ldap3-hardcoded-secret" target="_blank">python.ldap3.python-ldap3-hardcoded-secret.python-ldap3-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.mysql.python-mysql-hardcoded-secret.python-mysql-hardcoded-secret" target="_blank">python.mysql.python-mysql-hardcoded-secret.python-mysql-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.psycopg2.python-psycopg2-hardcoded-secret.python-psycopg2-hardcoded-secret" target="_blank">python.psycopg2.python-psycopg2-hardcoded-secret.python-psycopg2-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pyjwt.python-pyjwt-hardcoded-secret.python-pyjwt-hardcoded-secret" target="_blank">python.pyjwt.python-pyjwt-hardcoded-secret.python-pyjwt-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pymongo.python-mongo-hardcoded-secret.python-mongo-hardcoded-secret" target="_blank">python.pymongo.python-mongo-hardcoded-secret.python-mongo-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pymongo.python-pymongo-hardcoded-secret.python-pymongo-hardcoded-secret" target="_blank">python.pymongo.python-pymongo-hardcoded-secret.python-pymongo-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.pymysql.python-pymysql-hardcoded-secret.python-pymysql-hardcoded-secret" target="_blank">python.pymysql.python-pymysql-hardcoded-secret.python-pymysql-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.sqlalchemy.python-sqlalchemy-hardcoded-secret.python-sqlalchemy-hardcoded-secret" target="_blank">python.sqlalchemy.python-sqlalchemy-hardcoded-secret.python-sqlalchemy-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.tormysql.python-tormysql-hardcoded-secret.python-tormysql-hardcoded-secret" target="_blank">python.tormysql.python-tormysql-hardcoded-secret.python-tormysql-hardcoded-secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.webrepl.python-webrepl-hardcoded-secret.python-webrepl-hardcoded-secret" target="_blank">python.webrepl.python-webrepl-hardcoded-secret.python-webrepl-hardcoded-secret</a>
+</li>
+</ul>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="updated-team-tier-rules">Updated Team tier rules<a href="#updated-team-tier-rules" class="hash-link" aria-label="Direct link to Updated Team tier rules" title="Direct link to Updated Team tier rules">​</a></h4>
+<p>Added more sinks for the following rules:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=paid.paid.typescript.react.react-refs-prop.react-refs-prop" target="_blank">paid.paid.typescript.react.react-refs-prop.react-refs-prop</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=paid.paid.typescript.react.react-refs-url.react-refs-url" target="_blank">paid.paid.typescript.react.react-refs-url.react-refs-url</a>
+</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="july-2022">July 2022<a href="#july-2022" class="hash-link" aria-label="Direct link to July 2022" title="Direct link to July 2022">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new-rules-from-segmrep-community-and-semgrep-inc">New rules from Segmrep community and Semgrep, Inc<a href="#new-rules-from-segmrep-community-and-semgrep-inc" class="hash-link" aria-label="Direct link to New rules from Segmrep community and Semgrep, Inc" title="Direct link to New rules from Segmrep community and Semgrep, Inc">​</a></h3>
+<p>New rules from Semgrep community:</p>
+<ul>
+<li>Thanks to @securecodeninja!<!-- -->
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.dotnet.security.audit.mass-assignment" target="_blank">csharp.dotnet.security.audit.mass-assignment</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.lang.security.cryptography.unsigned-security-token" target="_blank">csharp.lang.security.cryptography.unsigned-security-token</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.lang.security.open-redirect" target="_blank">csharp.lang.security.open-redirect</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.lang.security.stacktrace-disclosure" target="_blank">csharp.lang.security.stacktrace-disclosure</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.dotnet.security.audit.missing-or-broken-authorization.missing-or-broken-authorization" target="_blank">csharp.dotnet.security.audit.missing-or-broken-authorization.missing-or-broken-authorization</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.dotnet.security.audit.open-directory-listing.open-directory-listing" target="_blank">csharp.dotnet.security.audit.open-directory-listing.open-directory-listing</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.dotnet.security.audit.misconfigured-lockout-option.misconfigured-lockout-option" target="_blank">csharp.dotnet.security.audit.misconfigured-lockout-option.misconfigured-lockout-option</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.dotnet.security.audit.razor-use-of-htmlstring.razor-use-of-htmlstring" target="_blank">csharp.dotnet.security.audit.razor-use-of-htmlstring.razor-use-of-htmlstring</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.dotnet.security.audit.ldap-injection" target="_blank">csharp.dotnet.security.audit.ldap-injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=csharp.dotnet.security.audit.xpath-injection" target="_blank">csharp.dotnet.security.audit.xpath-injection</a>
+</li>
+</ul>
+</li>
+</ul>
+<p>New rules have been added with taint sources:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-asyncio-create-exec-tainted-env-args" target="_blank">python.lang.security.audit.dangerous-asyncio-create-exec-tainted-env-args</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-asyncio-exec-tainted-env-args" target="_blank">python.lang.security.audit.dangerous-asyncio-exec-tainted-env-args</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-asyncio-shell-tainted-env-args" target="_blank">python.lang.security.audit.dangerous-asyncio-shell-tainted-env-args</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-code-run-tainted-env-args" target="_blank">python.lang.security.audit.dangerous-code-run-tainted-env-args</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-os-exec-tainted-env-args" target="_blank">python.lang.security.audit.dangerous-os-exec-tainted-env-args</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-spawn-process-tainted-env-args" target="_blank">python.lang.security.audit.dangerous-spawn-process-tainted-env-args</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-subinterpreters-run-string-tainted-env-args" target="_blank">python.lang.security.audit.dangerous-subinterpreters-run-string-tainted-env-args</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-subprocess-use-tainted-env-args" target="_blank">python.lang.security.audit.dangerous-subprocess-use-tainted-env-args</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-system-call-tainted-env-args" target="_blank">python.lang.security.audit.dangerous-system-call-tainted-env-args</a>
+</li>
+</ul>
+<p>There are now 80 <a href="https://semgrep.dev/pricing" target="_blank" rel="noopener noreferrer">team tier</a> only rules covering Java, PHP, JavaScript, and TypeScript available in the <a href="https://semgrep.dev/explore" target="_blank" rel="noopener noreferrer">Semgrep Registry</a>. These rules are designed to have higher precision and lower false positive rates.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rule-changes-and-updates">Rule changes and updates<a href="#rule-changes-and-updates" class="hash-link" aria-label="Direct link to Rule changes and updates" title="Direct link to Rule changes and updates">​</a></h3>
+<ul>
+<li>
+<p>Added additional import scenarios for os.system <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-system-call" target="_blank">python.lang.security.audit.dangerous-system-call</a></p>
+</li>
+<li>
+<p>Rewritten with taint mode:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-path-join-resolve-traversal" target="_blank">javascript.express.security.audit.express-path-join-resolve-traversal</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.audit.code-string-concat" target="_blank">javascript.lang.security.audit.code-string-concat</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.audit.path-traversal.path-join-resolve-traversal" target="_blank">javascript.lang.security.audit.path-traversal.path-join-resolve-traversal</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Updated precision of source with <code>focus-metavariable</code>:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.injection.tainted-sql-string" target="_blank">javascript.express.security.injection.tainted-sql-string</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.audit.sqli.node-mysql-sqli" target="_blank">javascript.lang.security.audit.sqli.node-mysql-sqli</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Added additional filters for acceptable SSL policies: <a href="https://semgrep.dev/r?q=terraform.aws.security.insecure-load-balancer-tls-version" target="_blank">terraform.aws.security.insecure-load-balancer-tls-version</a></p>
+</li>
+<li>
+<p>Added sanitizers: <a href="https://semgrep.dev/r?q=typescript.angular.security.audit.angular-domsanitizer" target="_blank">typescript.angular.security.audit.angular-domsanitizer</a></p>
+</li>
+<li>
+<p>Added sanitizers, added constant string filter: <a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-dangerouslysetinnerhtml" target="_blank">typescript.react.security.audit.react-dangerouslysetinnerhtml</a></p>
+</li>
+<li>
+<p>Uses taint mode to remove uninteresting sources: <a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-href-var" target="_blank">typescript.react.security.audit.react-href-var</a></p>
+</li>
+<li>
+<p>Remove for loop case due to high false positive (FP) rate: <a href="https://semgrep.dev/r?q=javascript.lang.security.audit.path-traversal.path-join-resolve-traversal" target="_blank">javascript.lang.security.audit.path-traversal.path-join-resolve-traversal</a></p>
+</li>
+<li>
+<p>FP reduction by removing cases where user input is likely a number type:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.audit.sqli.node-knex-sqli" target="_blank">javascript.lang.security.audit.sqli.node-knex-sqli</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.audit.sqli.node-mysql-sqli" target="_blank">javascript.lang.security.audit.sqli.node-mysql-sqli</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Exclude Error and Exception classes from results: <a href="https://semgrep.dev/r?q=ruby.lang.security.model-attributes-attr-accessible" target="_blank">ruby.lang.security.model-attributes-attr-accessible</a></p>
+</li>
+<li>
+<p>FP reduction: more specific sources: <a href="https://semgrep.dev/r?q=typescript.angular.security.audit.angular-domsanitizer" target="_blank">typescript.angular.security.audit.angular-domsanitizer</a></p>
+</li>
+<li>
+<p>FP reduction by limiting to more specific cases: <a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-dangerouslysetinnerhtml" target="_blank">typescript.react.security.audit.react-dangerouslysetinnerhtml</a></p>
+</li>
+<li>
+<p>Removed 1 case with high FP likelihood: <a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-href-var" target="_blank">typescript.react.security.audit.react-href-var</a></p>
+</li>
+<li>
+<p>Altered behavior:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=generic.secrets.security.detected-username-and-password-in-uri.detected-username-and-password-in-uri" target="_blank">generic.secrets.security.detected-username-and-password-in-uri.detected-username-and-password-in-uri</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.requests.best-practice.use-timeout+%28fix+autofix%29" target="_blank">python.requests.best-practice.use-timeout (fix autofix)</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Removed FPs:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.detect-eval-with-expression.detect-eval-with-expression" target="_blank">javascript.lang.security.detect-eval-with-expression.detect-eval-with-expression</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=dockerfile.best-practice.use-workdir.use-workdir+%28improved+message%29" target="_blank">dockerfile.best-practice.use-workdir.use-workdir (improved message)</a>
+</li>
+</ul>
+</li>
+<li>
+<p>Removed FPs: <a href="https://semgrep.dev/r?q=python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse+" target="_blank">python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse </a></p>
+</li>
+<li>
+<p>Fixed bug: <a href="https://semgrep.dev/r?q=python.pyramid.security.sqlalchemy-sql-injection.pyramid-sqlalchemy-sql-injection+" target="_blank">python.pyramid.security.sqlalchemy-sql-injection.pyramid-sqlalchemy-sql-injection </a></p>
+</li>
+<li>
+<p>Removed FPs: <a href="https://semgrep.dev/r?q=terraform.azure.security.appservice.appservice-account-identity-registered.appservice-account-identity-registered+" target="_blank">terraform.azure.security.appservice.appservice-account-identity-registered.appservice-account-identity-registered </a></p>
+</li>
+</ul>
+<p>Reduced severity to INFO:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-jwt-decoded-property" target="_blank">typescript.react.security.audit.react-jwt-decoded-property</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-jwt-in-localstorage" target="_blank">typescript.react.security.audit.react-jwt-in-localstorage</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-missing-noopener" target="_blank">typescript.react.security.audit.react-missing-noopener</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-missing-noreferrer" target="_blank">typescript.react.security.audit.react-missing-noreferrer</a>
+</li>
+</ul>
+<p>Limit sources to specific properties of Request object rather than all properties:</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-libxml-noent" target="_blank">javascript.express.security.audit.express-libxml-noent</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=avascript.express.security.audit.express-path-join-resolve-traversal" target="_blank">avascript.express.security.audit.express-path-join-resolve-traversal</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.remote-property-injection" target="_blank">javascript.express.security.audit.remote-property-injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.cors-misconfiguration" target="_blank">javascript.express.security.cors-misconfiguration</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.express-data-exfiltration" target="_blank">javascript.express.security.express-data-exfiltration</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.express-expat-xxe" target="_blank">javascript.express.security.express-expat-xxe</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.express-insecure-template-usage" target="_blank">javascript.express.security.express-insecure-template-usage</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.express-sandbox-injection" target="_blank">javascript.express.security.express-sandbox-injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.express-vm-injection" target="_blank">javascript.express.security.express-vm-injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.express-vm2-injection" target="_blank">javascript.express.security.express-vm2-injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.injection.raw-html-format" target="_blank">javascript.express.security.injection.raw-html-format</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.x-frame-options-misconfiguration" target="_blank">javascript.express.security.x-frame-options-misconfiguration</a>
+</li>
+</ul>
+<p>The <code>python.lang.security.audit.dangerous</code> rules have been reworked. All Python -dangerous- rules have had their confidence level changed to LOW. Renamed rules:</p>
+<ul>
+<li><a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-asyncio-create-exec" target="_blank">python.lang.security.audit.dangerous-asyncio-create-exec</a> renamed to <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-asyncio-create-exec-audit" target="_blank">python.lang.security.audit.dangerous-asyncio-create-exec-audit</a></li>
+<li><a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-asyncio-exec" target="_blank">python.lang.security.audit.dangerous-asyncio-exec</a> renamed to <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-asyncio-exec-audit" target="_blank">python.lang.security.audit.dangerous-asyncio-exec-audit</a></li>
+<li><a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-asyncio-shell" target="_blank">python.lang.security.audit.dangerous-asyncio-shell</a> renamed to <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-asyncio-shell-audit" target="_blank">python.lang.security.audit.dangerous-asyncio-shell-audit</a></li>
+<li><a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-code-run" target="_blank">python.lang.security.audit.dangerous-code-run</a> renamed to <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-code-run-audit" target="_blank">python.lang.security.audit.dangerous-code-run-audit</a></li>
+<li><a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-os-exec" target="_blank">python.lang.security.audit.dangerous-os-exec</a> renamed to <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-os-exec-audit" target="_blank">python.lang.security.audit.dangerous-os-exec-audit</a></li>
+<li><a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-spawn-process" target="_blank">python.lang.security.audit.dangerous-spawn-process</a> renamed to <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-spawn-process-audit" target="_blank">python.lang.security.audit.dangerous-spawn-process-audit</a></li>
+<li><a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-subinterpreters-run-string" target="_blank">python.lang.security.audit.dangerous-subinterpreters-run-string</a> renamed to <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-subinterpreters-run-string-audit" target="_blank">python.lang.security.audit.dangerous-subinterpreters-run-string-audit</a></li>
+<li><a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-subprocess-use" target="_blank">python.lang.security.audit.dangerous-subprocess-use</a> renamed to <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-subprocess-use-audit" target="_blank">python.lang.security.audit.dangerous-subprocess-use-audit</a></li>
+<li><a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-system-call" target="_blank">python.lang.security.audit.dangerous-system-call</a> renamed to <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-system-call-audit" target="_blank">python.lang.security.audit.dangerous-system-call-audit</a></li>
+<li><a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-testcapi-run-in-subinterp" target="_blank">python.lang.security.audit.dangerous-testcapi-run-in-subinterp</a> renamed to <a href="https://semgrep.dev/r?q=python.lang.security.audit.dangerous-testcapi-run-in-subinterp-audit" target="_blank">python.lang.security.audit.dangerous-testcapi-run-in-subinterp-audit</a></li>
+</ul>
+<p>Added to <code>p/default</code> (<code>p/default</code> are rules that run automatically with <code>semgrep --config p/default</code>):</p>
+<ul>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.audit.detect-replaceall-sanitization.detect-replaceall-sanitization+" target="_blank">javascript.audit.detect-replaceall-sanitization.detect-replaceall-sanitization </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-check-csurf-middleware-usage.express-check-csurf-middleware-usage+" target="_blank">javascript.express.security.audit.express-check-csurf-middleware-usage.express-check-csurf-middleware-usage </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-check-directory-listing.express-check-directory-listing+" target="_blank">javascript.express.security.audit.express-check-directory-listing.express-check-directory-listing </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-detect-notevil-usage.express-detect-notevil-usage+" target="_blank">javascript.express.security.audit.express-detect-notevil-usage.express-detect-notevil-usage </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-libxml-noent.express-libxml-noent+" target="_blank">javascript.express.security.audit.express-libxml-noent.express-libxml-noent </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-libxml-vm-noent.express-libxml-vm-noent+" target="_blank">javascript.express.security.audit.express-libxml-vm-noent.express-libxml-vm-noent </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-res-sendfile.express-res-sendfile+" target="_blank">javascript.express.security.audit.express-res-sendfile.express-res-sendfile </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-session-hardcoded-secret.express-session-hardcoded-secret+" target="_blank">javascript.express.security.audit.express-session-hardcoded-secret.express-session-hardcoded-secret </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-ssrf.express-ssrf+" target="_blank">javascript.express.security.audit.express-ssrf.express-ssrf </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-third-party-object-deserialization.express-third-party-object-deserialization+" target="_blank">javascript.express.security.audit.express-third-party-object-deserialization.express-third-party-object-deserialization </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-xml2json-xxe-event.express-xml2json-xxe-event+" target="_blank">javascript.express.security.audit.express-xml2json-xxe-event.express-xml2json-xxe-event </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.remote-property-injection.remote-property-injection+" target="_blank">javascript.express.security.audit.remote-property-injection.remote-property-injection </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.audit.hardcoded-hmac-key.hardcoded-hmac-key+" target="_blank">javascript.lang.security.audit.hardcoded-hmac-key.hardcoded-hmac-key </a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.sequelize.security.audit.sequelize-injection-express.express-sequelize-injection+" target="_blank">javascript.sequelize.security.audit.sequelize-injection-express.express-sequelize-injection </a>
+</li>
+</ul>
+<p>Removed from <code>p/default</code> in Semgrep Registry:</p>
+<details class="details_lb9f alert alert--info details_b_Ee" data-collapsed="true"><summary>Expand the list with all removed rules</summary><div><div class="collapsibleContent_i85q"><ul>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.archive_path_overwrite.admzip_path_overwrite" target="_blank">ajinabraham.njsscan.archive_path_overwrite.admzip_path_overwrite</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.archive_path_overwrite.tar_path_overwrite" target="_blank">ajinabraham.njsscan.archive_path_overwrite.tar_path_overwrite</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.archive_path_overwrite.zip_path_overwrite" target="_blank">ajinabraham.njsscan.archive_path_overwrite.zip_path_overwrite</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.archive_path_overwrite.zip_path_overwrite2" target="_blank">ajinabraham.njsscan.archive_path_overwrite.zip_path_overwrite2</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.buffer_noassert.buffer_noassert" target="_blank">ajinabraham.njsscan.buffer_noassert.buffer_noassert</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.crypto_node.node_aes_ecb" target="_blank">ajinabraham.njsscan.crypto_node.node_aes_ecb</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.crypto_node.node_aes_noiv" target="_blank">ajinabraham.njsscan.crypto_node.node_aes_noiv</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.crypto_node.node_insecure_random_generator" target="_blank">ajinabraham.njsscan.crypto_node.node_insecure_random_generator</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.crypto_node.node_md5" target="_blank">ajinabraham.njsscan.crypto_node.node_md5</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.crypto_node.node_sha1" target="_blank">ajinabraham.njsscan.crypto_node.node_sha1</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.crypto_node.node_weak_crypto" target="_blank">ajinabraham.njsscan.crypto_node.node_weak_crypto</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.error_disclosure.node_error_disclosure" target="_blank">ajinabraham.njsscan.error_disclosure.node_error_disclosure</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_deserialize.node_deserialize" target="_blank">ajinabraham.njsscan.eval_deserialize.node_deserialize</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_deserialize.serializetojs_deserialize" target="_blank">ajinabraham.njsscan.eval_deserialize.serializetojs_deserialize</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_drpc_deserialize.grpc_insecure_connection" target="_blank">ajinabraham.njsscan.eval_drpc_deserialize.grpc_insecure_connection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_grpc_deserialize.grpc_insecure_connection" target="_blank">ajinabraham.njsscan.eval_grpc_deserialize.grpc_insecure_connection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_node.eval_nodejs" target="_blank">ajinabraham.njsscan.eval_node.eval_nodejs</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_require.eval_require" target="_blank">ajinabraham.njsscan.eval_require.eval_require</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_sandbox.sandbox_code_injection" target="_blank">ajinabraham.njsscan.eval_sandbox.sandbox_code_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_vm2_injection.vm2_code_injection" target="_blank">ajinabraham.njsscan.eval_vm2_injection.vm2_code_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_vm2_injection.vm2_context_injection" target="_blank">ajinabraham.njsscan.eval_vm2_injection.vm2_context_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_vm_injection.vm_code_injection" target="_blank">ajinabraham.njsscan.eval_vm_injection.vm_code_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_vm_injection.vm_compilefunction_injection" target="_blank">ajinabraham.njsscan.eval_vm_injection.vm_compilefunction_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_vm_injection.vm_runincontext_injection" target="_blank">ajinabraham.njsscan.eval_vm_injection.vm_runincontext_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_vm_injection.vm_runinnewcontext_injection" target="_blank">ajinabraham.njsscan.eval_vm_injection.vm_runinnewcontext_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.eval_yaml_deserialize.yaml_deserialize" target="_blank">ajinabraham.njsscan.eval_yaml_deserialize.yaml_deserialize</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.exec_os_command.generic_os_command_exec" target="_blank">ajinabraham.njsscan.exec_os_command.generic_os_command_exec</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.exec_os_command.generic_os_command_exec2" target="_blank">ajinabraham.njsscan.exec_os_command.generic_os_command_exec2</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.exec_shelljs.shelljs_os_command_exec" target="_blank">ajinabraham.njsscan.exec_shelljs.shelljs_os_command_exec</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.express_bodyparser_dos.express_bodyparser" target="_blank">ajinabraham.njsscan.express_bodyparser_dos.express_bodyparser</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.express_hbs_lfr.express_lfr" target="_blank">ajinabraham.njsscan.express_hbs_lfr.express_lfr</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.express_hbs_lfr.express_lfr_warning" target="_blank">ajinabraham.njsscan.express_hbs_lfr.express_lfr_warning</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_anti_csrf.anti_csrf_control" target="_blank">ajinabraham.njsscan.good_anti_csrf.anti_csrf_control</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_check_crossdomain" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_check_crossdomain</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_check_csp" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_check_csp</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_check_expect_ct" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_check_expect_ct</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_dns_prefetch" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_dns_prefetch</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_feature_policy" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_feature_policy</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_frame_guard" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_frame_guard</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_hsts" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_hsts</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_ienoopen" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_ienoopen</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_nosniff" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_nosniff</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_referrer_policy" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_referrer_policy</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_x_powered_by" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_x_powered_by</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_helmet_checks.helmet_header_xss_filter" target="_blank">ajinabraham.njsscan.good_helmet_checks.helmet_header_xss_filter</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.good_ratelimiting.rate_limit_control" target="_blank">ajinabraham.njsscan.good_ratelimiting.rate_limit_control</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.hardcoded_passport.hardcoded_passport_secret" target="_blank">ajinabraham.njsscan.hardcoded_passport.hardcoded_passport_secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_cookie.cookie_session_default" target="_blank">ajinabraham.njsscan.header_cookie.cookie_session_default</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_cookie.cookie_session_no_domain" target="_blank">ajinabraham.njsscan.header_cookie.cookie_session_no_domain</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_cookie.cookie_session_no_httponly" target="_blank">ajinabraham.njsscan.header_cookie.cookie_session_no_httponly</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_cookie.cookie_session_no_maxage" target="_blank">ajinabraham.njsscan.header_cookie.cookie_session_no_maxage</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_cookie.cookie_session_no_path" target="_blank">ajinabraham.njsscan.header_cookie.cookie_session_no_path</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_cookie.cookie_session_no_samesite" target="_blank">ajinabraham.njsscan.header_cookie.cookie_session_no_samesite</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_cookie.cookie_session_no_secure" target="_blank">ajinabraham.njsscan.header_cookie.cookie_session_no_secure</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_cors_star.express_cors" target="_blank">ajinabraham.njsscan.header_cors_star.express_cors</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_cors_star.generic_cors" target="_blank">ajinabraham.njsscan.header_cors_star.generic_cors</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_helmet_disabled.helmet_feature_disabled" target="_blank">ajinabraham.njsscan.header_helmet_disabled.helmet_feature_disabled</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_injection.generic_header_injection" target="_blank">ajinabraham.njsscan.header_injection.generic_header_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_xss_protection.header_xss_generic" target="_blank">ajinabraham.njsscan.header_xss_protection.header_xss_generic</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.header_xss_protection.header_xss_lusca" target="_blank">ajinabraham.njsscan.header_xss_protection.header_xss_lusca</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.host_header_injection.host_header_injection" target="_blank">ajinabraham.njsscan.host_header_injection.host_header_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.jwt_exposed_credentials.jwt_exposed_credentials" target="_blank">ajinabraham.njsscan.jwt_exposed_credentials.jwt_exposed_credentials</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.jwt_exposed_data.jwt_exposed_data" target="_blank">ajinabraham.njsscan.jwt_exposed_data.jwt_exposed_data</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.jwt_express_hardcoded.jwt_express_hardcoded" target="_blank">ajinabraham.njsscan.jwt_express_hardcoded.jwt_express_hardcoded</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.jwt_hardcoded.hardcoded_jwt_secret" target="_blank">ajinabraham.njsscan.jwt_hardcoded.hardcoded_jwt_secret</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.jwt_none_algorithm.node_jwt_none_algorithm" target="_blank">ajinabraham.njsscan.jwt_none_algorithm.node_jwt_none_algorithm</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.jwt_not_revoked.jwt_not_revoked" target="_blank">ajinabraham.njsscan.jwt_not_revoked.jwt_not_revoked</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.layer7_object_dos.layer7_object_dos" target="_blank">ajinabraham.njsscan.layer7_object_dos.layer7_object_dos</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.logic_bypass.node_logic_bypass" target="_blank">ajinabraham.njsscan.logic_bypass.node_logic_bypass</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.nosql_injection.node_nosqli_js_injection" target="_blank">ajinabraham.njsscan.nosql_injection.node_nosqli_js_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.path_traversal.generic_path_traversal" target="_blank">ajinabraham.njsscan.path_traversal.generic_path_traversal</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.regex_dos.regex_dos" target="_blank">ajinabraham.njsscan.regex_dos.regex_dos</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.regex_injection.regex_injection_dos" target="_blank">ajinabraham.njsscan.regex_injection.regex_injection_dos</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.resolve_path_traversal.join_resolve_path_traversal" target="_blank">ajinabraham.njsscan.resolve_path_traversal.join_resolve_path_traversal</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electron.electron_allow_http" target="_blank">ajinabraham.njsscan.security_electron.electron_allow_http</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electron.electron_blink_integration" target="_blank">ajinabraham.njsscan.security_electron.electron_blink_integration</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electron.electron_context_isolation" target="_blank">ajinabraham.njsscan.security_electron.electron_context_isolation</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electron.electron_disable_websecurity" target="_blank">ajinabraham.njsscan.security_electron.electron_disable_websecurity</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electron.electron_experimental_features" target="_blank">ajinabraham.njsscan.security_electron.electron_experimental_features</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electron.electron_nodejs_integration" target="_blank">ajinabraham.njsscan.security_electron.electron_nodejs_integration</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electronjs.electron_allow_http" target="_blank">ajinabraham.njsscan.security_electronjs.electron_allow_http</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electronjs.electron_blink_integration" target="_blank">ajinabraham.njsscan.security_electronjs.electron_blink_integration</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electronjs.electron_context_isolation" target="_blank">ajinabraham.njsscan.security_electronjs.electron_context_isolation</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electronjs.electron_disable_websecurity" target="_blank">ajinabraham.njsscan.security_electronjs.electron_disable_websecurity</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electronjs.electron_experimental_features" target="_blank">ajinabraham.njsscan.security_electronjs.electron_experimental_features</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.security_electronjs.electron_nodejs_integration" target="_blank">ajinabraham.njsscan.security_electronjs.electron_nodejs_integration</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.sequelize_tls.sequelize_tls" target="_blank">ajinabraham.njsscan.sequelize_tls.sequelize_tls</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.sequelize_tls_validation.sequelize_tls_cert_validation" target="_blank">ajinabraham.njsscan.sequelize_tls_validation.sequelize_tls_cert_validation</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.sequelize_weak_tls.sequelize_weak_tls" target="_blank">ajinabraham.njsscan.sequelize_weak_tls.sequelize_weak_tls</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.server_side_template_injection.server_side_template_injection" target="_blank">ajinabraham.njsscan.server_side_template_injection.server_side_template_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.sql_injection.node_knex_sqli_injection" target="_blank">ajinabraham.njsscan.sql_injection.node_knex_sqli_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.sql_injection.node_sqli_injection" target="_blank">ajinabraham.njsscan.sql_injection.node_sqli_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.sql_injection_knex.node_knex_sqli_injection" target="_blank">ajinabraham.njsscan.sql_injection_knex.node_knex_sqli_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.ssrf_node.node_ssrf" target="_blank">ajinabraham.njsscan.ssrf_node.node_ssrf</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.ssrf_phantomjs.phantom_ssrf" target="_blank">ajinabraham.njsscan.ssrf_phantomjs.phantom_ssrf</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.ssrf_playwright.playwright_ssrf" target="_blank">ajinabraham.njsscan.ssrf_playwright.playwright_ssrf</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.ssrf_puppeteer.puppeteer_ssrf" target="_blank">ajinabraham.njsscan.ssrf_puppeteer.puppeteer_ssrf</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.ssrf_wkhtmltoimage.wkhtmltoimage_ssrf" target="_blank">ajinabraham.njsscan.ssrf_wkhtmltoimage.wkhtmltoimage_ssrf</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.ssrf_wkhtmltopdf.wkhtmltopdf_ssrf" target="_blank">ajinabraham.njsscan.ssrf_wkhtmltopdf.wkhtmltopdf_ssrf</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.timing_attack_node.node_timing_attack" target="_blank">ajinabraham.njsscan.timing_attack_node.node_timing_attack</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.tls_node.node_curl_ssl_verify_disable" target="_blank">ajinabraham.njsscan.tls_node.node_curl_ssl_verify_disable</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.tls_node.node_tls_reject" target="_blank">ajinabraham.njsscan.tls_node.node_tls_reject</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xml_entity_expansion_dos.node_entity_expansion" target="_blank">ajinabraham.njsscan.xml_entity_expansion_dos.node_entity_expansion</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xpathi_node.node_xpath_injection" target="_blank">ajinabraham.njsscan.xpathi_node.node_xpath_injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xss_mustache_escape.xss_disable_mustache_escape" target="_blank">ajinabraham.njsscan.xss_mustache_escape.xss_disable_mustache_escape</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xss_node.express_xss" target="_blank">ajinabraham.njsscan.xss_node.express_xss</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xss_serialize_js.xss_serialize_javascript" target="_blank">ajinabraham.njsscan.xss_serialize_js.xss_serialize_javascript</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xss_templates.handlebars_noescape" target="_blank">ajinabraham.njsscan.xss_templates.handlebars_noescape</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xss_templates.handlebars_safestring" target="_blank">ajinabraham.njsscan.xss_templates.handlebars_safestring</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xss_templates.squirrelly_autoescape" target="_blank">ajinabraham.njsscan.xss_templates.squirrelly_autoescape</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xxe_expat.xxe_expat" target="_blank">ajinabraham.njsscan.xxe_expat.xxe_expat</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xxe_node.node_xxe" target="_blank">ajinabraham.njsscan.xxe_node.node_xxe</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xxe_sax.xxe_sax" target="_blank">ajinabraham.njsscan.xxe_sax.xxe_sax</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=ajinabraham.njsscan.xxe_xml2json.xxe_xml2json" target="_blank">ajinabraham.njsscan.xxe_xml2json.xxe_xml2json</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-commands-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-commands-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-compile-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-compile-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-cryptography-attribute-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-cryptography-attribute-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-dl-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-dl-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-duo-client-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-duo-client-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-eval-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-eval-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-exec-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-exec-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-gl-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-gl-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-hashlib-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-hashlib-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-itsdangerous-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-itsdangerous-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-marshal-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-marshal-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-onelogin-attribute-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-onelogin-attribute-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-os-exec-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-os-exec-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-os-temp-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-os-temp-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-pickle-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-pickle-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-popen2-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-popen2-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-pycrypto-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-pycrypto-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-requests-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-requests-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-shelve-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-shelve-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-simplexmlrpcserver-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-simplexmlrpcserver-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-ssl-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-ssl-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-subprocess-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-subprocess-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-tarfile-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-tarfile-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-tempfile-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-tempfile-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-urllib3-connections-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-urllib3-connections-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-urllib3-warnings-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-urllib3-warnings-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-xml-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-xml-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-xmlsec-attribute-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-xmlsec-attribute-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-yaml-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-yaml-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=contrib.dlint.dlint-equivalent.insecure-zipfile-use" target="_blank">contrib.dlint.dlint-equivalent.insecure-zipfile-use</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.ci.security.use-frozen-lockfile.use-frozen-lockfile" target="_blank">generic.ci.security.use-frozen-lockfile.use-frozen-lockfile</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.ci.security.use-frozen-lockfile.use-frozen-lockfile-npm" target="_blank">generic.ci.security.use-frozen-lockfile.use-frozen-lockfile-npm</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.ci.security.use-frozen-lockfile.use-frozen-lockfile-pip" target="_blank">generic.ci.security.use-frozen-lockfile.use-frozen-lockfile-pip</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.ci.security.use-frozen-lockfile.use-frozen-lockfile-pipenv" target="_blank">generic.ci.security.use-frozen-lockfile.use-frozen-lockfile-pipenv</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.ci.security.use-frozen-lockfile.use-frozen-lockfile-yarn" target="_blank">generic.ci.security.use-frozen-lockfile.use-frozen-lockfile-yarn</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.html-templates.security.var-in-href.var-in-href" target="_blank">generic.html-templates.security.var-in-href.var-in-href</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.nginx.security.request-host-used.request-host-used" target="_blank">generic.nginx.security.request-host-used.request-host-used</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=generic.secrets.security.detected-google-gcm-service-account.detected-google-gcm-service-account" target="_blank">generic.secrets.security.detected-google-gcm-service-account.detected-google-gcm-service-account</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.browser.security.raw-html-join.raw-html-join" target="_blank">javascript.browser.security.raw-html-join.raw-html-join</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.express-xml2json-xxe-event.express-xml2json-xxe-event" target="_blank">javascript.express.security.audit.express-xml2json-xxe-event.express-xml2json-xxe-event</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.possible-user-input-redirect.unknown-value-in-redirect" target="_blank">javascript.express.security.audit.possible-user-input-redirect.unknown-value-in-redirect</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.remote-property-injection.remote-property-injection" target="_blank">javascript.express.security.audit.remote-property-injection.remote-property-injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.res-render-injection.res-render-injection" target="_blank">javascript.express.security.audit.res-render-injection.res-render-injection</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.express.security.audit.xss.mustache.var-in-script-tag.var-in-script-tag" target="_blank">javascript.express.security.audit.xss.mustache.var-in-script-tag.var-in-script-tag</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.correctness.no-replaceall.no-replaceall" target="_blank">javascript.lang.correctness.no-replaceall.no-replaceall</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.audit.prototype-pollution.prototype-pollution-assignment.prototype-pollution-assignment" target="_blank">javascript.lang.security.audit.prototype-pollution.prototype-pollution-assignment.prototype-pollution-assignment</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.lang.security.detect-non-literal-require.detect-non-literal-require" target="_blank">javascript.lang.security.detect-non-literal-require.detect-non-literal-require</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=javascript.sequelize.security.audit.sequelize-raw-query.sequelize-raw-query" target="_blank">javascript.sequelize.security.audit.sequelize-raw-query.sequelize-raw-query</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe" target="_blank">python.flask.security.xss.audit.template-unescaped-with-safe.template-unescaped-with-safe</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=python.flask.security.xss.audit.template-unquoted-attribute-var.template-unquoted-attribute-var" target="_blank">python.flask.security.xss.audit.template-unquoted-attribute-var.template-unquoted-attribute-var</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-missing-noreferrer.react-missing-noreferrer" target="_blank">typescript.react.security.audit.react-missing-noreferrer.react-missing-noreferrer</a>
+</li>
+<li>
+<a href="https://semgrep.dev/r?q=typescript.react.security.audit.react-unsanitized-property.react-unsanitized-property" target="_blank">typescript.react.security.audit.react-unsanitized-property.react-unsanitized-property</a>
+</li>
+</ul></div></div></details>
+<p>Other:</p>
+<ul>
+<li>Fixed message typo: <a href="https://semgrep.dev/r?q=javascript.lang.best-practice.leftover_debugging" target="_blank">javascript.lang.best-practice.leftover_debugging</a></li>
+</ul></div></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Blog post page navigation"><a class="pagination-nav__link pagination-nav__link--prev" href="/semgrep-docs/release-notes/february-2023"><div class="pagination-nav__sublabel">Newer post</div><div class="pagination-nav__label">February 2023</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/semgrep-docs/release-notes/january-2023"><div class="pagination-nav__sublabel">Older post</div><div class="pagination-nav__label">January 2023</div></a></nav></main><div class="col col--2"><div class="tableOfContents_bqdL thin-scrollbar"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#february-2023" class="table-of-contents__link toc-highlight">February 2023</a><ul><li><a href="#community-rules" class="table-of-contents__link toc-highlight">Community rules</a></li><li><a href="#pro-rules" class="table-of-contents__link toc-highlight">Pro rules</a></li></ul></li><li><a href="#january-2023" class="table-of-contents__link toc-highlight">January 2023</a><ul><li><a href="#community-rules-1" class="table-of-contents__link toc-highlight">Community rules</a></li><li><a href="#pro-rules-1" class="table-of-contents__link toc-highlight">Pro rules</a></li></ul></li><li><a href="#december-2022" class="table-of-contents__link toc-highlight">December 2022</a><ul><li><a href="#community-tier" class="table-of-contents__link toc-highlight">Community tier</a></li><li><a href="#team-tier" class="table-of-contents__link toc-highlight">Team tier</a></li></ul></li><li><a href="#november-2022" class="table-of-contents__link toc-highlight">November 2022</a><ul><li><a href="#community-tier-1" class="table-of-contents__link toc-highlight">Community tier</a></li><li><a href="#team-tier-1" class="table-of-contents__link toc-highlight">Team tier</a></li></ul></li><li><a href="#october-2022" class="table-of-contents__link toc-highlight">October 2022</a><ul><li><a href="#community-tier-2" class="table-of-contents__link toc-highlight">Community tier</a></li><li><a href="#team-tier-2" class="table-of-contents__link toc-highlight">Team tier</a></li></ul></li><li><a href="#september-2022" class="table-of-contents__link toc-highlight">September 2022</a><ul><li><a href="#community-tier-3" class="table-of-contents__link toc-highlight">Community tier</a></li></ul></li><li><a href="#august-2022" class="table-of-contents__link toc-highlight">August 2022</a><ul><li><a href="#community-tier-4" class="table-of-contents__link toc-highlight">Community tier</a></li><li><a href="#team-tier-3" class="table-of-contents__link toc-highlight">Team tier</a></li></ul></li><li><a href="#july-2022" class="table-of-contents__link toc-highlight">July 2022</a><ul><li><a href="#new-rules-from-segmrep-community-and-semgrep-inc" class="table-of-contents__link toc-highlight">New rules from Segmrep community and Semgrep, Inc</a></li><li><a href="#rule-changes-and-updates" class="table-of-contents__link toc-highlight">Rule changes and updates</a></li></ul></li></ul></div></div></div></div></div><footer class="footer"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://go.semgrep.dev/slack" target="_blank" rel="noopener noreferrer" class="footer__link-item">Slack<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/semgrep/semgrep" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://github.com/semgrep/semgrep/issues" target="_blank" rel="noopener noreferrer" class="footer__link-item">File an issue<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">Products</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://semgrep.dev/products/semgrep-code/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Semgrep Code</a></li><li class="footer__item"><a href="https://semgrep.dev/products/semgrep-supply-chain/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Semgrep Supply Chain</a></li><li class="footer__item"><a href="https://semgrep.dev/products/semgrep-appsec-platform/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Semgrep AppSec Platform</a></li></ul></div><div class="col footer__col"><div class="footer__title">Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" target="_self" href="/semgrep-docs/docs">Docs</a></li><li class="footer__item"><a href="https://semgrep.dev/blog" target="_blank" rel="noopener noreferrer" class="footer__link-item">Blog</a></li><li class="footer__item"><a href="https://semgrep.dev/contact/demo" target="_blank" rel="noopener noreferrer" class="footer__link-item">Book a demo</a></li><li class="footer__item"><a href="https://semgrep.dev/pricing/" target="_blank" rel="noopener noreferrer" class="footer__link-item">Pricing</a></li><li class="footer__item"><a href="https://semgrep.dev/privacy" target="_self" rel="noopener noreferrer" class="footer__link-item">Privacy</a></li><li class="footer__item"><a href="https://semgrep.dev/terms" target="_blank" rel="noopener noreferrer" class="footer__link-item">Terms of service</a></li></ul></div><div class="col footer__col"><div class="footer__title">Company</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://semgrep.dev/about" target="_blank" rel="noopener noreferrer" class="footer__link-item">About<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://semgrep.dev/about/careers" target="_blank" rel="noopener noreferrer" class="footer__link-item">Careers<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://semgrep.dev/contact-us" target="_blank" rel="noopener noreferrer" class="footer__link-item">Contact us<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Semgrep, Inc. Semgrep®️  is a registered trademark of Semgrep, Inc. These docs are made with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
