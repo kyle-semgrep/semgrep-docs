@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmegadocs=self.webpackChunkmegadocs||[]).push([[34674],{77695:e=>{e.exports=JSON.parse('{"tags":[{"label":"Release notes","permalink":"/docs/release-notes/tags/release-notes","count":51}]}')}}]);

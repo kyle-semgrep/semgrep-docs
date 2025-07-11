@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmegadocs=self.webpackChunkmegadocs||[]).push([[55094],{76413:e=>{e.exports=JSON.parse('{"tags":[{"label":"Release notes","permalink":"/semgrep-docs/release-notes/tags/release-notes","count":51}]}')}}]);
