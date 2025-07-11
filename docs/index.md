@@ -143,7 +143,7 @@ See the [Supported languages](/supported-languages#language-maturity-summary) do
     - If the finding has a function call that proves the finding is reachable, this function call is highlighted in the code in the finding's **Details** page.
     - Added context in PR comments as to **why** a finding is reachable, under the section **Why this is reachable**. This alerts developers to the impact of a reachable finding. 
     - Improved how filters are presented in the **Supply Chain > Vulnerabilities** page.
-    - Unreachable findings are hidden by default from the findings list.
+    - Unreachable findings are hidden by default from the findings list.1234
 - Improved performance of Semgrep Secret scans due to back-end updates.
 
 [See the latest release notes <i class="fa-solid fa-arrow-right"></i>](/release-notes)
