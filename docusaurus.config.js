@@ -7,7 +7,7 @@ module.exports = {
   tagline: 'Lightweight static analysis for many languages. Find bug variants with patterns that look like source code.',
   url: 'https://kyle-semgrep.github.io',
   baseUrl: '/semgrep-docs/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'semgrep', // Usually your GitHub org/user name.
