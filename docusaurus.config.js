@@ -243,7 +243,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/kyle-semgrep/semgrep-docs/edit/main',
+            'https://github.com/semgrep/semgrep-docs/edit/main',
           routeBasePath: '/'
         },
         blog: {
