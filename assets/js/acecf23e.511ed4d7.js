@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmegadocs=self.webpackChunkmegadocs||[]).push([[81903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/docs/release-notes","blogTitle":"Release notes","authorsListPath":"/docs/release-notes/authors"}')}}]);
