@@ -201,7 +201,7 @@ Semgrep makes network requests in accordance with the data storage previously me
 
 Semgrep AppSec Platform provides centralized policy management. See the [Policies documentation](/semgrep-code/policies) for more details.
 
-### What is a policy?
+### What is a Policy?
 
 A policy is a simple collection of rules and a definition of what to do with rule results: fail the Semgrep CI run and/or send non-blocking notifications to third-party services like Slack. Please see the [Policies documentation](/semgrep-code/policies) for more details.
 
