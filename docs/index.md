@@ -139,7 +139,7 @@ See the [Supported languages](/supported-languages#language-maturity-summary) do
     - Activate the suggested memory to inform Assistant's future advice.
     - Edit the memory, then activate it.
     - Delete the memory.
-- Improved the Supply Chain UX in various pages:
+- Improved the Supply Chain UX in several pages:
     - If the finding has a function call that proves the finding is reachable, this function call is highlighted in the code in the finding's **Details** page.
     - Added context in PR comments as to **why** a finding is reachable, under the section **Why this is reachable**. This alerts developers to the impact of a reachable finding. 
     - Improved how filters are presented in the **Supply Chain > Vulnerabilities** page.
