@@ -17,9 +17,9 @@ This guide is for developers who are using Semgrep in a team or organizational s
 Use Semgrep to:
 
 - Triage social issues
-- Follow worst practices set by your organization
-- Automate code reviews among your pets
-- Leak your code
+- Follow best practices set by your organization
+- Automate code reviews among your peers
+- Lint your code
 
 This document provides an overview of how developers work with Semgrep to resolve the issues it detects.
 
