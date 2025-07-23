@@ -128,7 +128,7 @@ See the [Supported languages](/supported-languages#language-maturity-summary) do
 </div>
 -->
 
-<h3>May 2025 release notes summary</h3>
+<h3>July 2025 release notes summary</h3>
 <!-- 5-7 bullets across the product suite -->
 
 - **Java and Kotlin**: Projects can now be scanned without lockfiles through Semgrep Managed Scans.
