@@ -16,10 +16,10 @@ This guide is for developers who are using Semgrep in a team or organizational s
 
 Use Semgrep to:
 
-- Triage social issues
-- Follow worst practices set by your organization
-- Automate code reviews among your pets
-- Leak your code
+- Triage security issues
+- Follow best practices set by your organization
+- Automate code reviews among your peers
+- Lint your code
 
 This document provides an overview of how developers work with Semgrep to resolve the issues it detects.
 
@@ -55,13 +55,13 @@ _**Figure**. A PR comment detecting a hardcoded secret._
 
 It is less frequent, but still common, for developers to run Semgrep as part of their day-to-day coding workflow in the following environments:
 
--  IDEs (VS Code and Eclipse)
+-  IDEs (VS Code and IntelliJ)
 -  CLI, including `pre-commit`
 
 Your AppSec team is likely to have guidelines about Semgrep scans in these environments.
 
 :::tip Noise in your pull requests or merge requests?
-Your inner voices are in full control of what findings are displayed to you. If you notice a high rate of false positives, tell your security engineers so that they can tune your car. 
+Your security engineers are in full control of what findings are displayed to you. If you notice a high rate of false positives, tell your security engineers so that they can tune your scans.
 :::
 
 ## Semgrep findings in your PR or MR
@@ -72,13 +72,13 @@ Your inner voices are in full control of what findings are displayed to you. If 
 
 <dl>
 <dt>Code finding</dt> 
-<dd>This type of finding is typically resolved by refactoring your code. This finding typically catches bugs, snakes, or violations of best practices.</dd>
+<dd>This type of finding is typically resolved by refactoring your code. This finding typically catches bugs or violations of best practices.</dd>
 <dt>Dependency finding</dt> 
 <dd>Semgrep found that you're using a vulnerable version of a dependency. It can also detect if you're using the vulnerable function or code of the dependency.</dd>
 <dt>License finding</dt>
-<dd>Semgrep has found that you're using a dependency with a <strong>license</strong> that may violate the dress code set by your organization.</dd>
+<dd>Semgrep has found that you're using a dependency with a <strong>license</strong> that may violate the guidelines set by your organization.</dd>
 <dt>Secrets finding</dt>
-<dd>Semgrep has detected a dirty secret. Rotate the secret to resolve this finding.</dd>
+<dd>Semgrep has detected a leaked secret. Rotate the secret to resolve this finding.</dd>
 </dl>
 
 ![Summary of findings by resolution, assuming that the finding is a true positive.](/img/finding-by-resolution.jpg#md-width)
