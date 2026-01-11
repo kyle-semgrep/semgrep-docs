@@ -3,9 +3,9 @@ tags:
   - Bitbucket
   - Jenkins
   - webhooks
-description: How to trigger events from the Bitbucket server to a Jenkins instance
+description: Trigger events from a Bitbucket server to a Jenkins instance.
 ---
-# Triggering events from Bitbucket to Jenkins
+# Trigger events from Bitbucket to Jenkins
 
 
 This guide walks you through connecting your Bitbucket source code manager (SCM) with Jenkins, a CI/CD environment, through the use of **webhooks**. By connecting Bitbucket with Jenkins, you are able to customize jobs, such as your Semgrep job, based on push or pull events from Bitbucket.
